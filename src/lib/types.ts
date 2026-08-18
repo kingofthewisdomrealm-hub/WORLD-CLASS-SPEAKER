@@ -1,6 +1,8 @@
 export type GameStage =
   | 'interview'
   | 'vault'
+  | 'classify'
+  | 'organize'
   | 'matching'
   | 'themes'
   | 'scoreboard'
@@ -19,12 +21,32 @@ export type ContentKind =
   | 'audience-desire'
   | 'cta'
 
+export type SpeechComponentRole =
+  | 'unsorted'
+  | 'hook'
+  | 'relevance'
+  | 'problem'
+  | 'promise'
+  | 'preview'
+  | 'story'
+  | 'insight'
+  | 'evidence'
+  | 'framework'
+  | 'example'
+  | 'humor'
+  | 'callback'
+  | 'recap'
+  | 'cta'
+  | 'last-line'
+
 export type IdeaStatus =
   | 'raw'
   | 'interesting'
   | 'unrelated'
   | 'promoted'
   | 'clustered'
+  | 'classified'
+  | 'placed'
 
 export interface SpeakerProfile {
   id: string
@@ -44,6 +66,7 @@ export interface IdeaCard {
   id: string
   number: number
   kind: ContentKind
+  role: SpeechComponentRole
   title: string
   rawTranscript: string
   originalWording: string
@@ -53,7 +76,27 @@ export interface IdeaCard {
   tags: string[]
   sourceMessageId?: string
   clusterId?: string
+  sectionKey?: string
+  slotKey?: string
+  classifiedXpAwarded?: boolean
+  placedXpAwarded?: boolean
   createdAt: string
+}
+
+export interface SpeechSlot {
+  key: string
+  label: string
+  hint: string
+  role: SpeechComponentRole
+  ideaIds: string[]
+}
+
+export interface SpeechSection {
+  key: string
+  label: string
+  hint: string
+  startedXpAwarded: boolean
+  slots: SpeechSlot[]
 }
 
 export interface Cluster {
@@ -100,6 +143,7 @@ export interface SpeechProject {
   xp: number
   influenceScore: number
   ideas: IdeaCard[]
+  sections: SpeechSection[]
   clusters: Cluster[]
   themes: Theme[]
   messages: InterviewMessage[]
@@ -119,4 +163,10 @@ export interface SuggestedCluster {
   ideaNumbers: number[]
   reason: string
   proposedName: string
+}
+
+export interface SuggestedRole {
+  ideaId: string
+  role: SpeechComponentRole
+  reason: string
 }

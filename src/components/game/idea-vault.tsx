@@ -25,11 +25,11 @@ export function IdeaVault({ projectId }: { projectId: string }) {
             You discovered {project.ideas.length} idea{project.ideas.length === 1 ? '' : 's'}.
           </h1>
           <p className="mt-2 max-w-2xl text-amber-100/60">
-            Nothing was discarded. These cards are your long-term intellectual repository.
+            Nothing was discarded. Next you will classify these into the components of a speech.
           </p>
         </div>
-        <Button asChild onClick={() => setStage(projectId, 'matching')}>
-          <Link href={`/play/${projectId}/matching`}>Enter matching game</Link>
+        <Button asChild onClick={() => setStage(projectId, 'classify')}>
+          <Link href={`/play/${projectId}/classify`}>Classify into speech cards</Link>
         </Button>
       </header>
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">

@@ -12,14 +12,12 @@ Repository: [kingofthewisdomrealm-hub/WORLD-CLASS-SPEAKER](https://github.com/ki
 
 1. Game Start
 2. Speaker profile + speech project
-3. Podcast interview (text now, voice-ready)
-4. Idea extraction into cards with XP
-5. Idea Vault
-6. AI cluster suggestions that are never commands
-7. Drag-and-drop matching
-8. Theme naming
-9. Speaker scoreboard
-10. Session history persisted in the browser
+3. Level 1 interview / brain dump
+4. Idea cards with XP
+5. Classify cards into speech components
+6. Organize those into nested section cards (introduction, body, conclusion)
+7. Speaker scoreboard
+8. Session history persisted in the browser
 
 Practice gyms, boss battles, and full speech assembly come later.
 

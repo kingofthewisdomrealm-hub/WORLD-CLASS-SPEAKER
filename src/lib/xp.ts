@@ -1,4 +1,4 @@
-import type { ContentKind } from '@/lib/types'
+import type { ContentKind, SpeechComponentRole } from '@/lib/types'
 
 export const XP = {
   idea: 10,
@@ -13,6 +13,9 @@ export const XP = {
   'audience-pain': 15,
   'audience-desire': 15,
   cta: 10,
+  classify: 10,
+  placeInSlot: 15,
+  startSection: 25,
   matchThree: 30,
   nameCluster: 20,
   createCluster: 25,
@@ -43,18 +46,42 @@ export function influenceRating(score: number) {
 
 export function computeInfluenceScore({
   ideaCount,
+  classifiedCount,
+  placedCount,
   clusterCount,
   namedThemeCount,
   xp,
 }: {
   ideaCount: number
+  classifiedCount: number
+  placedCount: number
   clusterCount: number
   namedThemeCount: number
   xp: number
 }) {
-  const fromIdeas = Math.min(ideaCount * 3, 40)
-  const fromClusters = Math.min(clusterCount * 6, 24)
-  const fromThemes = Math.min(namedThemeCount * 8, 24)
+  const fromIdeas = Math.min(ideaCount * 2, 28)
+  const fromClassified = Math.min(classifiedCount * 2, 18)
+  const fromPlaced = Math.min(placedCount * 3, 24)
+  const fromClusters = Math.min(clusterCount * 4, 12)
+  const fromThemes = Math.min(namedThemeCount * 6, 12)
   const fromXp = Math.min(Math.floor(xp / 25), 12)
-  return Math.min(99, 12 + fromIdeas + fromClusters + fromThemes + fromXp)
+  return Math.min(
+    99,
+    12 + fromIdeas + fromClassified + fromPlaced + fromClusters + fromThemes + fromXp
+  )
+}
+
+export function defaultRoleFromKind(kind: ContentKind): SpeechComponentRole {
+  if (kind === 'story') return 'story'
+  if (kind === 'lesson') return 'insight'
+  if (kind === 'audience-pain') return 'problem'
+  if (kind === 'audience-desire') return 'promise'
+  if (kind === 'cta') return 'cta'
+  if (kind === 'quote') return 'hook'
+  if (kind === 'humor') return 'humor'
+  if (kind === 'data') return 'evidence'
+  if (kind === 'framework') return 'framework'
+  if (kind === 'metaphor') return 'hook'
+  if (kind === 'question') return 'hook'
+  return 'unsorted'
 }

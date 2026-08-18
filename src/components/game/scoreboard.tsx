@@ -39,15 +39,25 @@ export function Scoreboard({ projectId }: { projectId: string }) {
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Stat label="Speaker Level" value={level.title} />
         <Stat label="XP" value={String(project.xp)} />
-        <Stat label="Ideas" value={String(project.ideas.length)} />
-        <Stat label="Themes" value={String(project.themes.length)} />
+        <Stat label="Cards" value={String(project.ideas.length)} />
+        <Stat
+          label="Placed"
+          value={String(
+            project.ideas.filter((idea) => idea.sectionKey && idea.slotKey).length
+          )}
+        />
       </section>
       <section className="rounded-2xl border border-amber-200/10 bg-black/25 p-6">
         <p className="font-mono text-[11px] tracking-[0.28em] text-amber-300/70">TODAY</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-3">
           <Stat label="XP Earned" value={String(todayXp)} />
           <Stat label="Session Ideas" value={String(latest?.ideasCreated ?? 0)} />
-          <Stat label="Clusters" value={String(project.clusters.length)} />
+          <Stat
+            label="Classified"
+            value={String(
+              project.ideas.filter((idea) => idea.role && idea.role !== 'unsorted').length
+            )}
+          />
         </div>
       </section>
       <section className="rounded-2xl border border-amber-200/10 bg-black/25 p-6">

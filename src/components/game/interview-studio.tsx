@@ -185,7 +185,7 @@ export function InterviewStudio({ projectId }: InterviewStudioProps) {
                 onClick={handleEndDump}
                 className="border-amber-200/20 text-amber-100"
               >
-                End brain dump
+                End dump · classify
               </Button>
               <Button type="submit" disabled={isBusy || !draft.trim()}>
                 Send

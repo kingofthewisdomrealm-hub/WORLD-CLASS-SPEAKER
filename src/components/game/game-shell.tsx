@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils'
 const STAGES = [
   { href: 'interview', label: 'Interview' },
   { href: 'vault', label: 'Vault' },
-  { href: 'matching', label: 'Matching' },
-  { href: 'themes', label: 'Themes' },
+  { href: 'classify', label: 'Classify' },
+  { href: 'organize', label: 'Organize' },
   { href: 'scoreboard', label: 'Scoreboard' },
 ] as const
 

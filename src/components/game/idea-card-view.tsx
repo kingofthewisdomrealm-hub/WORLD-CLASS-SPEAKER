@@ -1,4 +1,5 @@
 import { KIND_LABELS } from '@/lib/kind-labels'
+import { SPEECH_ROLE_LABELS } from '@/lib/speech-structure'
 import { formatIdeaNumber } from '@/lib/ids'
 import { kindAccent } from '@/lib/store'
 import type { IdeaCard } from '@/lib/types'
@@ -39,7 +40,9 @@ export function IdeaCardView({
           {KIND_LABELS[idea.kind].toUpperCase()} {formatIdeaNumber(idea.number)}
         </span>
         <Badge variant="outline" className="border-stone-500/40 bg-white/40 text-[10px] text-stone-700">
-          {idea.status}
+          {idea.role && idea.role !== 'unsorted'
+            ? SPEECH_ROLE_LABELS[idea.role]
+            : idea.status}
         </Badge>
       </div>
       <p className="font-serif text-base leading-snug text-stone-900">{idea.title}</p>

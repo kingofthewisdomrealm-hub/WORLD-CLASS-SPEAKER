@@ -15,6 +15,7 @@ Opening arc:
 1. First, understand who they are and what they have been thinking about.
 2. Early on, invite a brain dump of every speech idea, unfinished thought, old speech, story, argument, phrase, lesson, or question. Tell them not to organize or judge.
 3. Then go deeper with questions like hard-won lessons, contradictions, before/after moments, what pisses them off, what they could talk about for three hours, and what they want an audience to do differently.
+4. Do not assemble the speech yet. Classification into introduction, body, and conclusion happens after the dump.
 
 Style:
 - Speak as HOST. Warm, sharp, never corporate.
@@ -33,6 +34,20 @@ Rules:
 - Skip greetings, filler, and repeated ideas already listed.
 - Return an empty list if nothing new is present.
 - Never decide what the speech is about.`
+
+export const CLASSIFY_INSTRUCTIONS = `You classify brain-dump cards into speech-component roles.
+
+This is not choosing the Big Idea. It is labeling Lego pieces.
+
+Allowed roles:
+unsorted, hook, relevance, problem, promise, preview, story, insight, evidence, framework, example, humor, callback, recap, cta, last-line.
+
+Rules:
+- Prefer a specific role over unsorted when the function is clear.
+- A story can be a story or a hook. Choose the strongest likely use, not the only use.
+- reason should sound like: "Here is a job this card could do."
+- Never say this is what the speech is about.
+- Leave a card unsorted if it is too raw to place.`
 
 export const CLUSTER_INSTRUCTIONS = `You notice possible relationships among idea cards.
 

@@ -8,10 +8,12 @@ import type {
   ExtractedIdea,
   GameStage,
   IdeaCard,
+  SpeechComponentRole,
   SpeechProject,
   SpeakerProfile,
   SuggestedCluster,
 } from '@/lib/types'
+import { createDefaultSections, mergeSections } from '@/lib/speech-structure'
 import { computeInfluenceScore, xpForKind, XP } from '@/lib/xp'
 
 interface SpeakerState {
@@ -43,21 +45,48 @@ interface SpeakerState {
   applySuggestedCluster: (projectId: string, suggestion: SuggestedCluster) => Cluster | null
   splitCluster: (projectId: string, clusterId: string) => void
   markIdeaStatus: (projectId: string, ideaId: string, status: IdeaCard['status']) => void
+  classifyIdea: (projectId: string, ideaId: string, role: SpeechComponentRole) => void
+  classifyIdeas: (
+    projectId: string,
+    assignments: Array<{ ideaId: string; role: SpeechComponentRole }>
+  ) => void
+  placeIdeaInSlot: (
+    projectId: string,
+    ideaId: string,
+    sectionKey: string | null,
+    slotKey?: string | null
+  ) => void
   promoteClustersToThemes: (projectId: string) => void
   renameTheme: (projectId: string, themeId: string, name: string) => void
   endInterviewSession: (projectId: string) => void
 }
 
-function refreshProject(project: SpeechProject): SpeechProject {
-  const namedThemeCount = project.themes.length
+function normalizeProject(project: SpeechProject): SpeechProject {
+  const ideas = project.ideas.map((idea) => ({
+    ...idea,
+    role: idea.role ?? 'unsorted',
+  }))
   return {
     ...project,
+    ideas,
+    sections: mergeSections(project.sections ?? createDefaultSections()),
+  }
+}
+
+function refreshProject(project: SpeechProject): SpeechProject {
+  const normalized = normalizeProject(project)
+  const classifiedCount = normalized.ideas.filter((idea) => idea.role !== 'unsorted').length
+  const placedCount = normalized.ideas.filter((idea) => idea.sectionKey && idea.slotKey).length
+  return {
+    ...normalized,
     updatedAt: nowIso(),
     influenceScore: computeInfluenceScore({
-      ideaCount: project.ideas.length,
-      clusterCount: project.clusters.length,
-      namedThemeCount,
-      xp: project.xp,
+      ideaCount: normalized.ideas.length,
+      classifiedCount,
+      placedCount,
+      clusterCount: normalized.clusters.length,
+      namedThemeCount: normalized.themes.length,
+      xp: normalized.xp,
     }),
   }
 }
@@ -126,6 +155,7 @@ export const useSpeakerStore = create<SpeakerState>()(
           xp: 0,
           influenceScore: 12,
           ideas: [],
+          sections: createDefaultSections(),
           clusters: [],
           themes: [],
           messages: [
@@ -150,7 +180,10 @@ export const useSpeakerStore = create<SpeakerState>()(
         set((state) => ({ projects: [project, ...state.projects] }))
         return project
       },
-      getProject: (projectId) => get().projects.find((project) => project.id === projectId),
+      getProject: (projectId) => {
+        const project = get().projects.find((item) => item.id === projectId)
+        return project ? normalizeProject(project) : undefined
+      },
       setStage: (projectId, stage) =>
         set((state) => ({
           projects: updateProject(state.projects, projectId, (project) => ({
@@ -186,6 +219,7 @@ export const useSpeakerStore = create<SpeakerState>()(
                   id: createId(),
                   number: project.ideas.length + index + 1,
                   kind: idea.kind,
+                  role: 'unsorted',
                   title: idea.title,
                   rawTranscript: idea.rawTranscript,
                   originalWording: idea.originalWording,
@@ -373,6 +407,106 @@ export const useSpeakerStore = create<SpeakerState>()(
             ),
           })),
         })),
+      classifyIdea: (projectId, ideaId, role) =>
+        set((state) => ({
+          projects: updateProject(state.projects, projectId, (project) => {
+            const idea = project.ideas.find((item) => item.id === ideaId)
+            if (!idea) return project
+            const shouldAward = role !== 'unsorted' && !idea.classifiedXpAwarded
+            const next: SpeechProject = {
+              ...project,
+              ideas: project.ideas.map((item) =>
+                item.id === ideaId
+                  ? {
+                      ...item,
+                      role,
+                      status: role === 'unsorted' ? 'raw' : 'classified',
+                      classifiedXpAwarded: shouldAward || item.classifiedXpAwarded,
+                      tags: Array.from(new Set([...item.tags, role])),
+                    }
+                  : item
+              ),
+            }
+            if (!shouldAward) return next
+            return award(next, XP.classify, `Classified as ${role}`)
+          }),
+        })),
+      classifyIdeas: (projectId, assignments) => {
+        for (const assignment of assignments)
+          get().classifyIdea(projectId, assignment.ideaId, assignment.role)
+      },
+      placeIdeaInSlot: (projectId, ideaId, sectionKey, slotKey) =>
+        set((state) => ({
+          projects: updateProject(state.projects, projectId, (rawProject) => {
+            const project = normalizeProject(rawProject)
+            const idea = project.ideas.find((item) => item.id === ideaId)
+            if (!idea) return project
+            const sections = createDefaultSections().map((section) => {
+              const current = project.sections.find((item) => item.key === section.key) ?? section
+              return {
+                ...current,
+                slots: section.slots.map((slot) => {
+                  const currentSlot =
+                    current.slots.find((item) => item.key === slot.key) ?? slot
+                  const withoutIdea = currentSlot.ideaIds.filter((id) => id !== ideaId)
+                  const shouldAdd =
+                    section.key === sectionKey && slot.key === slotKey
+                  return {
+                    ...currentSlot,
+                    ideaIds: shouldAdd ? [...withoutIdea, ideaId] : withoutIdea,
+                  }
+                }),
+              }
+            })
+            const targetSlot = sections
+              .find((section) => section.key === sectionKey)
+              ?.slots.find((slot) => slot.key === slotKey)
+            const placed = Boolean(sectionKey && slotKey)
+            const shouldAwardPlace = placed && !idea.placedXpAwarded
+            let next: SpeechProject = {
+              ...project,
+              sections,
+              ideas: project.ideas.map((item) =>
+                item.id === ideaId
+                  ? {
+                      ...item,
+                      sectionKey: sectionKey ?? undefined,
+                      slotKey: slotKey ?? undefined,
+                      role:
+                        placed && item.role === 'unsorted' && targetSlot
+                          ? targetSlot.role
+                          : item.role,
+                      status: placed ? 'placed' : item.role === 'unsorted' ? 'raw' : 'classified',
+                      placedXpAwarded: shouldAwardPlace || item.placedXpAwarded,
+                    }
+                  : item
+              ),
+            }
+            if (shouldAwardPlace)
+              next = award(next, XP.placeInSlot, `Placed in ${targetSlot?.label ?? 'section'}`)
+            next = {
+              ...next,
+              sections: next.sections.map((section) => {
+                const filledSlots = section.slots.filter((slot) => slot.ideaIds.length > 0).length
+                const shouldAwardSection = filledSlots >= 2 && !section.startedXpAwarded
+                return shouldAwardSection
+                  ? { ...section, startedXpAwarded: true }
+                  : section
+              }),
+            }
+            const wasStarted = new Set(
+              project.sections
+                .filter((section) => section.startedXpAwarded)
+                .map((section) => section.key)
+            )
+            const newlyStarted = next.sections.filter(
+              (section) => section.startedXpAwarded && !wasStarted.has(section.key)
+            )
+            for (const section of newlyStarted)
+              next = award(next, XP.startSection, `Started ${section.label} components`)
+            return next
+          }),
+        })),
       promoteClustersToThemes: (projectId) =>
         set((state) => ({
           projects: updateProject(state.projects, projectId, (project) => {
@@ -431,6 +565,17 @@ export const useSpeakerStore = create<SpeakerState>()(
         speaker: state.speaker,
         projects: state.projects,
       }),
+      merge: (persistedState, currentState) => {
+        const persisted = persistedState as Partial<{
+          speaker: SpeakerProfile | null
+          projects: SpeechProject[]
+        }>
+        return {
+          ...currentState,
+          speaker: persisted.speaker ?? currentState.speaker,
+          projects: (persisted.projects ?? currentState.projects).map(normalizeProject),
+        }
+      },
       onRehydrateStorage: () => (_state, error) => {
         if (error) console.error('Speaker OS failed to restore', error)
         useSpeakerStore.getState().setHasHydrated(true)
