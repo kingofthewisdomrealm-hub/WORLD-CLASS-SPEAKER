@@ -26,7 +26,17 @@ Human State OS does not replace those pages. It adds routing and experience desi
 
 ## Current status
 
-**Research captured; implementation not started.**
+**Phase 1 shipped: framework graph + read-only route explorer.** See
+[DECISIONS.md](./DECISIONS.md) for why Phase 0 was dropped.
+
+- Graph and router: `src/lib/human-state-os/`
+- Explorer: `/human-state-os` (noindex, read-only)
+- Refresh the table: `npm run sync:frameworks`
+- Checks: `npm test` — 26 tests over graph references, symmetric edges,
+  source URLs, and router fixtures
+
+Still true of the pass below: no production redesign, no framework page
+removed, no sensing of any kind.
 
 This documentation pass intentionally makes no production redesign, removes no framework pages, and adds no large frontend. Claims remain labeled by evidence strength:
 
@@ -38,11 +48,18 @@ This documentation pass intentionally makes no production redesign, removes no f
 
 ## Next priorities
 
-1. Extract and review the 36 live framework pages as versioned graph nodes.
-2. Encode typed relationships such as `leads_to`, `pairs_with`, `pushes_against`, and `addresses_problem`.
-3. Build a read-only route explorer for `STATE → PROBLEM → SCALE → FRAMEWORK`.
-4. Seed a small, low-risk, consent-aware intervention library.
-5. Test the Predict → Experience → Measure → Explain → Apply → Teach loop before building a Live Copilot.
+1. ~~Extract and review the 36 live framework pages as versioned graph nodes.~~
+   Done — read from upstream, not re-authored. See [D1](./DECISIONS.md).
+2. ~~Encode typed relationships such as `leads_to`, `pairs_with`, `pushes_against`.~~
+   Done — 68 bonds and 10 seminar chains, each carrying its rationale.
+3. ~~Build a read-only route explorer for `STATE → PROBLEM → SCALE → FRAMEWORK`.~~
+   Done — `/human-state-os`.
+4. **Author `usefulWhen` / `notUsefulWhen` upstream.** The router can say which
+   square a tool sits in; it cannot yet say when a tool is the wrong answer.
+   This is the cheapest remaining accuracy gain and it is writing, not code.
+5. Seed a small, low-risk, consent-aware intervention library.
+6. Test the Predict → Experience → Measure → Explain → Apply → Teach loop
+   before building a Live Copilot.
 
 The near-term rule is simple: **preserve first, validate the graph second, build the flashy robot conductor later.**
 

@@ -601,19 +601,27 @@ Success metrics should prioritize safety, learning, usefulness, and voluntary fo
 
 ## 19. Delivery plan
 
-### Phase 0 — preserve and model
+### Phase 0 — preserve and model — **DROPPED as written, 2026-09-12**
 
-- Keep these research/specification documents canonical.
-- Extract the 36 framework nodes and page relationships into reviewed structured data.
-- Create evidence and safety taxonomies.
-- Do not change production navigation or framework pages.
+The extraction step assumed the frameworks existed only as web pages. They
+already exist as reviewed typed data upstream, so re-authoring them here
+would have created a second copy that drifts. See
+[DECISIONS.md → D1](./DECISIONS.md). What survives of this phase:
 
-### Phase 1 — manual Framework Router
+- These documents stay canonical. ✅
+- Production navigation and framework pages unchanged. ✅
+- Evidence and safety taxonomies: still to do. Nothing upstream carries them
+  yet, so the node type declares them and leaves them empty.
 
-- Add a typed framework dataset and graph validation.
-- Build an internal route explorer for State → Problem → Scale → Framework.
-- Show route explanations and alternatives.
-- Seed only low-risk interventions.
+### Phase 1 — manual Framework Router — **SHIPPED 2026-09-12**
+
+- Typed framework dataset and graph validation. ✅ `src/lib/human-state-os/`
+- Internal route explorer. ✅ `/human-state-os`, noindex, read-only
+- Route explanations and alternatives. ✅ every route carries its component
+  scores and plain-English reasons
+- Low-risk interventions: **not started.** Deliberately — there is no
+  intervention library yet and inventing one would put unreviewed
+  instructions in front of a room.
 
 ### Phase 2 — Session Builder
 
@@ -644,7 +652,25 @@ Success metrics should prioritize safety, learning, usefulness, and voluntary fo
 9. No biometric or sensitive inference is required.
 10. Documentation names research claims, working hypotheses, and product ideas distinctly.
 
-## 21. Recommended next implementation step
+## 21. Recommended next implementation step — **DONE 2026-09-12**
 
-Build a **versioned framework-graph seed** for the 36 Ruler of Wisdom pages plus a read-only route explorer. Reuse the repository's existing TypeScript types, browser-persisted store, card/taxonomy patterns, classification utilities, and game-shell UI, but keep Human State OS as a new bounded module. This proves the core `STATE → PROBLEM → SCALE → FRAMEWORK` decision path before adding live sensing, complex intervention delivery, or production redesign.
+The step as written: a versioned framework-graph seed for the 36 Ruler of
+Wisdom pages plus a read-only route explorer, kept as a bounded module. That
+is what shipped, with one change of method — the seed is synced from
+upstream rather than re-authored here ([D1](./DECISIONS.md)).
+
+### What to do next, in order
+
+1. **Author `usefulWhen` and `notUsefulWhen` upstream.** The router can rank
+   by square, sequence and burden. It cannot yet say "not this one, not
+   today". That is the largest accuracy gain available and it costs writing,
+   not engineering.
+2. **Run the router against real sessions on paper.** Before any UI is built
+   on top of it, take ten rooms Josias has actually run, enter the state and
+   problem by hand, and check whether the top route is the tool he reached
+   for. Cheap, and it either validates the weights or kills them.
+3. **Only then** the Session Builder in Phase 2.
+
+Interventions, evidence claims and the Live Copilot stay where they are until
+step 2 produces a number worth trusting.
 

@@ -21,6 +21,21 @@ Repository: [kingofthewisdomrealm-hub/WORLD-CLASS-SPEAKER](https://github.com/ki
 
 Practice gyms, boss battles, and full speech assembly come later.
 
+## Human State OS
+
+A second, bounded module lives alongside the game: the framework graph and
+route explorer described in [`docs/human-state-os/`](docs/human-state-os/).
+
+```bash
+npm run sync:frameworks   # pull the Ruler of Wisdom table into a versioned snapshot
+npm test                  # graph + router checks
+```
+
+Then open [http://localhost:3000/human-state-os](http://localhost:3000/human-state-os).
+
+The 36 frameworks are **edited at rulerofwisdom.com and only read here**. Never
+hand-edit `src/lib/human-state-os/framework-snapshot.json`.
+
 ## Run it
 
 ```bash
