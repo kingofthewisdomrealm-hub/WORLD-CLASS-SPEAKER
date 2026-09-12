@@ -116,6 +116,51 @@ describe("uncertainty", () => {
 	})
 })
 
+describe("alternatives", () => {
+	// Regression, 2026-09-12: the diagnostic question moved from "Where does the
+	// time go?" to "What's it all for?" when only fatigue changed. Alternatives
+	// answer "did I read the PROBLEM wrong?" — the room's state has no business
+	// in that answer.
+	it("does not change what it asks when only the room's state changes", () => {
+		const ask = (state: Record<string, number>) =>
+			routeFrameworks(graph, {
+				problem: "needs",
+				scale: "room",
+				problemConfidence: 0.3,
+				state,
+			})
+		const rested = ask({})
+		const spent = ask({ fatigue: 1 })
+		const wiped = ask({ cognitive_load: 1, fatigue: 0.8 })
+
+		expect(spent.unresolved).toEqual(rested.unresolved)
+		expect(wiped.unresolved).toEqual(rested.unresolved)
+		expect(spent.alternatives.map((a) => a.route.node.slug)).toEqual(
+			rested.alternatives.map((a) => a.route.node.slug),
+		)
+	})
+
+	it("does not depend on how many routes are shown", () => {
+		const at = (limit: number) =>
+			routeFrameworks(graph, {
+				problem: "needs",
+				scale: "room",
+				problemConfidence: 0.3,
+				limit,
+			}).alternatives.map((a) => a.route.node.slug)
+		expect(at(3)).toEqual(at(6))
+		expect(at(6)).toEqual(at(36))
+	})
+
+	it("offers a different family and a different scale", () => {
+		const response = routeFrameworks(graph, { problem: "needs", scale: "room" })
+		const [family, scale] = response.alternatives
+		expect(family.route.node.primaryProblem).not.toBe("needs")
+		expect(scale.route.node.primaryScale).not.toBe("room")
+		expect(family.route.node.id).not.toBe(scale.route.node.id)
+	})
+})
+
 describe("state", () => {
 	it("calls for stabilising before tools when the room is threatened", () => {
 		const response = routeFrameworks(graph, {

@@ -147,16 +147,35 @@ export function routeFrameworks(graph: FrameworkGraph, query: RouteQuery): Route
 		? neighboursOf(graph, afterNode.id).filter((n) => n.outbound || n.edge.type === "useful_after")
 		: []
 
+	/**
+	 * The two fits, with nothing else mixed in.
+	 *
+	 * Kept pure and state-free because the alternatives below are answers to
+	 * "did I read the PROBLEM wrong?" — a question about the problem, not about
+	 * how tired anyone is. Scoring them with the full total let the burden
+	 * penalty change which family got nominated, so the diagnostic question
+	 * moved when only fatigue moved. It must not.
+	 */
+	const problemFitOf = (node: FrameworkNode): number =>
+		node.primaryProblem === query.problem
+			? 1
+			: node.secondaryProblems.includes(query.problem)
+				? 0.35
+				: 0
+
+	const scaleFitOf = (node: FrameworkNode): number => {
+		const period = scaleByIdFn.get(node.primaryScale)?.period ?? 0
+		return SCALE_DISTANCE_FIT[Math.abs(period - askedPeriod)] ?? 0
+	}
+
 	const routes: Route[] = candidates.map((node) => {
 		const explanation: string[] = []
 
 		// problem_fit
-		let problemFit = 0
+		const problemFit = problemFitOf(node)
 		if (node.primaryProblem === query.problem) {
-			problemFit = 1
 			explanation.push(`${familyLabel} is its own column on the table.`)
-		} else if (node.secondaryProblems.includes(query.problem)) {
-			problemFit = 0.35
+		} else if (problemFit > 0) {
 			const bridge = neighboursOf(graph, node.id).find(
 				(n) => n.node.primaryProblem === query.problem,
 			)
@@ -170,7 +189,7 @@ export function routeFrameworks(graph: FrameworkGraph, query: RouteQuery): Route
 		// scale_fit
 		const period = scaleByIdFn.get(node.primaryScale)?.period ?? 0
 		const distance = Math.abs(period - askedPeriod)
-		const scaleFit = SCALE_DISTANCE_FIT[distance] ?? 0
+		const scaleFit = scaleFitOf(node)
 		if (distance === 0) {
 			explanation.push(`Built for ${node.unit}.`)
 		} else if (scaleFit > 0) {
@@ -238,11 +257,42 @@ export function routeFrameworks(graph: FrameworkGraph, query: RouteQuery): Route
 	routes.sort((a, b) => b.total - a.total || a.node.slug.localeCompare(b.node.slug))
 
 	const top = routes.slice(0, limit)
-	const topIds = new Set(top.map((r) => r.node.id))
+	const byNodeId = new Map(routes.map((r) => [r.node.id, r]))
+
+	/**
+	 * Pick the best route among a candidate set, ranked by a state-free score.
+	 * Deterministic and independent of `limit` — a display cutoff must never
+	 * decide which alternative the facilitator is shown.
+	 */
+	const bestBy = (
+		eligible: (node: FrameworkNode) => boolean,
+		score: (node: FrameworkNode) => number,
+	): Route | undefined => {
+		let best: { route: Route; score: number } | undefined
+		for (const node of candidates) {
+			if (!eligible(node)) continue
+			const value = score(node)
+			const route = byNodeId.get(node.id)
+			if (!route) continue
+			if (
+				!best ||
+				value > best.score ||
+				(value === best.score && node.slug.localeCompare(best.route.node.slug) < 0)
+			) {
+				best = { route, score: value }
+			}
+		}
+		return best?.route
+	}
 
 	const alternatives: { reason: string; route: Route }[] = []
-	const otherFamily = routes.find(
-		(r) => !topIds.has(r.node.id) && r.node.primaryProblem !== query.problem,
+
+	// "Did I read the problem wrong?" — the best tool in another family,
+	// preferring one that still reaches the family you asked about.
+	const otherFamily = bestBy(
+		(node) => node.primaryProblem !== query.problem,
+		(node) =>
+			ROUTE_WEIGHTS.scale * scaleFitOf(node) + ROUTE_WEIGHTS.problem * problemFitOf(node),
 	)
 	if (otherFamily) {
 		const label =
@@ -253,11 +303,12 @@ export function routeFrameworks(graph: FrameworkGraph, query: RouteQuery): Route
 			route: otherFamily,
 		})
 	}
-	const otherScale = routes.find(
-		(r) =>
-			!topIds.has(r.node.id) &&
-			r.node.primaryScale !== query.scale &&
-			r.node.id !== otherFamily?.node.id,
+
+	// "Did I read the scale wrong?" — same idea, one axis over.
+	const otherScale = bestBy(
+		(node) =>
+			node.primaryScale !== query.scale && node.id !== otherFamily?.node.id,
+		(node) => ROUTE_WEIGHTS.problem * problemFitOf(node),
 	)
 	if (otherScale) {
 		alternatives.push({
