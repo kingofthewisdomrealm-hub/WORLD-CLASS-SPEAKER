@@ -1,0 +1,2216 @@
+{
+	"sourceUrl": "https://rulerofwisdom.com/agents/frameworks.json",
+	"fetchedAt": "2026-09-12T12:50:54.749Z",
+	"sourceVersion": "7b39ef8b07744e69",
+	"payload": {
+		"$schema": "https://rulerofwisdom.com/agents/frameworks.schema.json",
+		"version": 1,
+		"generatedFor": "agents",
+		"access": "free",
+		"name": "Periodic Table of Frameworks",
+		"pitch": {
+			"want": "You want a clear head when it counts.",
+			"problem": "The problem is the good ideas live in twenty books. You collect quotes. You still stall when the moment arrives.",
+			"plan": "This is the plan: every useful thinking tool on one map. Click a square. You'll see what you want, what's in the way, and the steps.",
+			"cta": "Start with the square that sounds like your day.",
+			"failure": "Skip this and you will keep buying books instead of using a plan.",
+			"seminars": "Seminars",
+			"seminarLead": "Each combination of frameworks is a seminar. The name is the sitting. The order is the rundown."
+		},
+		"url": "https://rulerofwisdom.com/forum/",
+		"resourceUrl": "https://rulerofwisdom.com/agents/frameworks.json",
+		"groups": [
+			{
+				"id": "needs",
+				"symbol": "Nd",
+				"label": "Needs",
+				"question": "What are you hungry for?",
+				"hue": "#f2d36a",
+				"hueTo": "#e8b03a",
+				"block": 1
+			},
+			{
+				"id": "fears",
+				"symbol": "Fr",
+				"label": "Fears",
+				"question": "What are you afraid of?",
+				"hue": "#f29b8c",
+				"hueTo": "#e87870",
+				"block": 1
+			},
+			{
+				"id": "meaning",
+				"symbol": "Mn",
+				"label": "Meaning",
+				"question": "What's it all for?",
+				"hue": "#cbb3ef",
+				"hueTo": "#a888e0",
+				"block": 2
+			},
+			{
+				"id": "decision",
+				"symbol": "Dc",
+				"label": "Decision",
+				"question": "How do you decide?",
+				"hue": "#8eccec",
+				"hueTo": "#4eb0e0",
+				"block": 2
+			},
+			{
+				"id": "identity",
+				"symbol": "Id",
+				"label": "Identity",
+				"question": "Who are you being?",
+				"hue": "#8fd9b8",
+				"hueTo": "#48c090",
+				"block": 2
+			},
+			{
+				"id": "time",
+				"symbol": "Tm",
+				"label": "Time",
+				"question": "Where does the time go?",
+				"hue": "#f0b07a",
+				"hueTo": "#e89050",
+				"block": 3
+			},
+			{
+				"id": "skill",
+				"symbol": "Sk",
+				"label": "Skill",
+				"question": "How do you get better?",
+				"hue": "#c5cbd6",
+				"hueTo": "#929aac",
+				"block": 3
+			}
+		],
+		"periods": [
+			{
+				"n": 1,
+				"label": "Moment",
+				"grain": "one moment"
+			},
+			{
+				"n": 2,
+				"label": "Person",
+				"grain": "one person"
+			},
+			{
+				"n": 3,
+				"label": "Life",
+				"grain": "a whole life"
+			},
+			{
+				"n": 4,
+				"label": "Room",
+				"grain": "a group of people"
+			}
+		],
+		"counts": {
+			"frameworks": 36,
+			"known": 36,
+			"bonds": 68,
+			"seminars": 10
+		},
+		"frameworks": [
+			{
+				"slug": "maslow",
+				"z": 1,
+				"symbol": "Ms",
+				"name": "Hierarchy of needs",
+				"source": "Abraham Maslow",
+				"group": "needs",
+				"period": 3,
+				"n": 5,
+				"law": "A life is a sequence of needs. You do not skip a rung.",
+				"story": "You want a life that feels like it is going somewhere. The problem is you are starving on a lower rung and calling it a personality. This pyramid is the plan: feed the need that is actually empty. Ignore the ladder and you keep buying safety with a self-actualization speech. Name the rung and the next meal is obvious.",
+				"unit": "a life",
+				"status": "known",
+				"complement": "dickens",
+				"url": "https://rulerofwisdom.com/forum/maslow/",
+				"parts": [
+					{
+						"key": "physiological",
+						"label": "Physiological",
+						"depth": "Air, food, sleep, a body that works. If this is empty, nothing above it is a real conversation."
+					},
+					{
+						"key": "safety",
+						"label": "Safety",
+						"depth": "A floor that holds. Roof, money, a nervous system that is not under threat."
+					},
+					{
+						"key": "belonging",
+						"label": "Love and belonging",
+						"depth": "People who would notice if you were gone. A tribe, not an audience."
+					},
+					{
+						"key": "esteem",
+						"label": "Esteem",
+						"depth": "Respect you can feel — yours, and from the room. Status without this is a costume."
+					},
+					{
+						"key": "actualization",
+						"label": "Self-actualization",
+						"depth": "Becoming the person the lower rungs were feeding. You do not skip here."
+					}
+				]
+			},
+			{
+				"slug": "six-needs",
+				"z": 2,
+				"symbol": "6N",
+				"name": "Six human needs",
+				"source": "Tony Robbins",
+				"group": "needs",
+				"period": 2,
+				"n": 6,
+				"law": "Every person is running six needs, all the time. The mix is the person.",
+				"story": "You want to know what a person is actually running. The problem is you think they want one thing. They want six, all the time, in a mix. Read the mix. Guess one need and you will feed the wrong hunger and wonder why they do not move. Name the mix and the person is no longer a mystery.",
+				"unit": "a person",
+				"status": "known",
+				"complement": "two-fears",
+				"url": "https://rulerofwisdom.com/forum/six-needs/",
+				"parts": [
+					{
+						"key": "certainty",
+						"label": "Certainty",
+						"depth": "A floor. Predictable enough to breathe. Too much of this is a cage."
+					},
+					{
+						"key": "variety",
+						"label": "Variety",
+						"depth": "Surprise. Uncertainty you chose. Starve this and certainty turns into a prison."
+					},
+					{
+						"key": "significance",
+						"label": "Significance",
+						"depth": "Mattering. Being someone in the room — not background."
+					},
+					{
+						"key": "connection",
+						"label": "Love and connection",
+						"depth": "Belonging to someone, not to an audience. The need significance keeps impersonating."
+					},
+					{
+						"key": "growth",
+						"label": "Growth",
+						"depth": "Expanding. If this is empty, the personality needs start eating the spirit."
+					},
+					{
+						"key": "contribution",
+						"label": "Contribution",
+						"depth": "Beyond you. The need that outlives the mix."
+					}
+				]
+			},
+			{
+				"slug": "two-fears",
+				"z": 3,
+				"symbol": "2F",
+				"name": "Two fears",
+				"source": "Tony Robbins",
+				"group": "fears",
+				"period": 2,
+				"n": 2,
+				"law": "Two fears run the person: not being enough, and not being loved.",
+				"story": "You want to know why you keep circling. The problem is you think the fear has a thousand names. It has two: not enough, and not loved. Name which one is driving. Leave it unnamed and every fight is about the weather. Name it and the weather is just weather.",
+				"unit": "a person",
+				"status": "known",
+				"complement": "six-needs",
+				"url": "https://rulerofwisdom.com/forum/two-fears/",
+				"parts": [
+					{
+						"key": "not-enough",
+						"label": "Not being enough",
+						"depth": "The fear you are not sufficient. It dresses up as work, as proving, as never arriving."
+					},
+					{
+						"key": "not-loved",
+						"label": "Not being loved",
+						"depth": "The fear you will be left. It dresses up as pleasing, as clinging, as never risking."
+					}
+				]
+			},
+			{
+				"slug": "judge",
+				"z": 4,
+				"symbol": "Jd",
+				"name": "JUDGE",
+				"source": "Ruler of Wisdom",
+				"group": "skill",
+				"period": 1,
+				"n": 4,
+				"law": "Judgment is trained by a short choice with the principle attached, repeated.",
+				"story": "You want judgment you can trust in ninety seconds. The problem is you wait for a big moment to become the kind of person who chooses well. This loop is the plan: situation, choice, principle, next rep. Skip the reps and the big moment will still find an amateur. Do the reps and the big moment is just another one.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/judge/",
+				"parts": [
+					{
+						"key": "situation",
+						"label": "Situation",
+						"depth": "Name what is actually in front of you. Not the story. The scene."
+					},
+					{
+						"key": "choice",
+						"label": "Choice",
+						"depth": "Two roads, now. Waiting is also a choice."
+					},
+					{
+						"key": "principle",
+						"label": "Principle",
+						"depth": "The sentence you want to have chosen by. Attach it to the rep or the rep is just a mood."
+					},
+					{
+						"key": "next",
+						"label": "Next rep",
+						"depth": "Another one. Judgment is a count, not a feeling."
+					}
+				]
+			},
+			{
+				"slug": "dickens",
+				"z": 5,
+				"symbol": "Dk",
+				"name": "Dickens Process",
+				"source": "Tony Robbins (UPW)",
+				"group": "meaning",
+				"period": 3,
+				"n": 3,
+				"law": "You change when you see the past, present, and future of not changing, in one sitting.",
+				"story": "You want to change a life, not a mood. The problem is insight without a date on it. This sitting is the plan: see the past, the present, and the future of not changing, in one room. Skip the future and you will have a good cry and the same year. See all three and staying the same becomes the expensive option.",
+				"unit": "a life",
+				"status": "known",
+				"complement": "maslow",
+				"url": "https://rulerofwisdom.com/forum/dickens/",
+				"parts": [
+					{
+						"key": "past",
+						"label": "Christmas past",
+						"depth": "What not changing has already cost. Dates, not vibes."
+					},
+					{
+						"key": "present",
+						"label": "Christmas present",
+						"depth": "What it is costing today, while you sit here."
+					},
+					{
+						"key": "future",
+						"label": "Christmas future",
+						"depth": "The life you get if you do not turn. Stay until staying the same is the expensive option."
+					}
+				]
+			},
+			{
+				"slug": "archetypes",
+				"z": 6,
+				"symbol": "Ar",
+				"name": "Six archetypes",
+				"source": "Ruler of Wisdom",
+				"group": "identity",
+				"period": 2,
+				"n": 6,
+				"law": "There is a pattern to how you move. Naming it is not a personality test — it is a start.",
+				"story": "You want a name for how you move. The problem is tests that flatter and then evaporate. Six patterns. Name the one that is acting. Stay unnamed and you keep auditioning for a life. Name it and you have a start — not a cage.",
+				"unit": "a person",
+				"status": "known",
+				"complement": "four-agreements",
+				"url": "https://rulerofwisdom.com/forum/archetypes/",
+				"parts": [
+					{
+						"key": "builder",
+						"label": "Builder",
+						"depth": "Makes the thing. Starves when there is nothing to construct."
+					},
+					{
+						"key": "challenger",
+						"label": "Challenger",
+						"depth": "Tests the room. Starves when everyone agrees too fast."
+					},
+					{
+						"key": "diplomat",
+						"label": "Diplomat",
+						"depth": "Holds the space between people. Starves when the room wants a fight."
+					},
+					{
+						"key": "anchor",
+						"label": "Anchor",
+						"depth": "Holds the line. Starves when everything is a pivot."
+					},
+					{
+						"key": "strategist",
+						"label": "Strategist",
+						"depth": "Sees the board. Starves when the room only wants motion."
+					},
+					{
+						"key": "seeker",
+						"label": "Seeker",
+						"depth": "Goes looking. Starves when the answer is supposed to be settled."
+					}
+				]
+			},
+			{
+				"slug": "eisenhower",
+				"z": 7,
+				"symbol": "Em",
+				"name": "Eisenhower matrix",
+				"source": "Dwight D. Eisenhower / Stephen Covey",
+				"group": "time",
+				"period": 2,
+				"n": 4,
+				"law": "A task is urgent or not, important or not. Those two questions are the whole choice.",
+				"story": "You want a day that belongs to what matters. The problem is everything that yells gets the hour. Two questions: urgent or not, important or not. That is the whole choice. Skip them and you will be busy until you are empty. Sort them and the important-not-urgent box is where a life is built.",
+				"unit": "a task",
+				"status": "known",
+				"complement": "slight-edge",
+				"url": "https://rulerofwisdom.com/forum/eisenhower/",
+				"parts": [
+					{
+						"key": "do",
+						"label": "Do",
+						"blurb": "Urgent and important.",
+						"depth": "The fire. Handle it now. If this box is always full, you are not choosing — you are being chosen."
+					},
+					{
+						"key": "schedule",
+						"label": "Schedule",
+						"blurb": "Important, not urgent.",
+						"depth": "Where a life is built. Protect it or the fire will eat it."
+					},
+					{
+						"key": "delegate",
+						"label": "Delegate",
+						"blurb": "Urgent, not important.",
+						"depth": "Someone else's clock. Do it yourself and you will be useful, not effective."
+					},
+					{
+						"key": "delete",
+						"label": "Delete",
+						"blurb": "Neither.",
+						"depth": "Noise. The courage is not doing it."
+					}
+				]
+			},
+			{
+				"slug": "cashflow-quadrant",
+				"z": 8,
+				"symbol": "CQ",
+				"name": "Cashflow quadrant",
+				"source": "Robert Kiyosaki",
+				"group": "identity",
+				"period": 3,
+				"n": 4,
+				"law": "You are paid as an employee, a self-employed person, a business owner, or an investor. The quadrant is the person.",
+				"story": "You want money that does not own your hours. The problem is you are trying to get rich in the quadrant you were hired into. Name whether you are E, S, B, or I. Stay in E and S and you will trade time forever. Cross toward B and I and the money starts working while you sleep.",
+				"unit": "a life",
+				"status": "known",
+				"complement": "assets-liabilities",
+				"url": "https://rulerofwisdom.com/forum/cashflow-quadrant/",
+				"parts": [
+					{
+						"key": "employee",
+						"label": "Employee",
+						"mark": "E",
+						"depth": "You trade hours for a paycheck. Safety lives here. So does a ceiling."
+					},
+					{
+						"key": "self-employed",
+						"label": "Self-employed",
+						"mark": "S",
+						"depth": "You are the business. Freedom looks like this until you cannot get sick."
+					},
+					{
+						"key": "business",
+						"label": "Business owner",
+						"mark": "B",
+						"depth": "The system works when you do not. Other people are the machine."
+					},
+					{
+						"key": "investor",
+						"label": "Investor",
+						"mark": "I",
+						"depth": "Money works. You choose where it sits. This is the other side of the line."
+					}
+				]
+			},
+			{
+				"slug": "assets-liabilities",
+				"z": 9,
+				"symbol": "Av",
+				"name": "Assets and liabilities",
+				"source": "Robert Kiyosaki",
+				"group": "decision",
+				"period": 2,
+				"n": 2,
+				"law": "If it puts money in your pocket it is an asset. If it takes money out it is a liability. The name on the bank form does not matter.",
+				"story": "You want to know if a thing is making you rich or making you look rich. The problem is the bank form lies. One question: does it put money in, or take money out. Call a liability an asset and you will decorate your way into a job you cannot quit. Name it honestly and the next buy is a decision, not a costume.",
+				"unit": "a thing",
+				"status": "known",
+				"complement": "cashflow-quadrant",
+				"url": "https://rulerofwisdom.com/forum/assets-liabilities/",
+				"parts": [
+					{
+						"key": "asset",
+						"label": "Asset",
+						"blurb": "Puts money in.",
+						"depth": "It pays you whether you showed up or not. The name on the form does not make it this."
+					},
+					{
+						"key": "liability",
+						"label": "Liability",
+						"blurb": "Takes money out.",
+						"depth": "It costs you to keep it. A house you sleep in is usually this, no matter what the bank said."
+					}
+				]
+			},
+			{
+				"slug": "slight-edge",
+				"z": 17,
+				"symbol": "SE",
+				"name": "The Slight Edge",
+				"source": "Jeff Olson",
+				"group": "skill",
+				"period": 3,
+				"n": 7,
+				"law": "Simple disciplines, done daily, compound. They are easy to do and easy not to do. That is the whole training of a life.",
+				"story": "You want a life that turns. The problem is the daily thing is too small to feel like it matters, so you skip it. Simple disciplines: easy to do, easy not to do. That is the fork. Skip them and five years from now you will not recognize the bill. Do them and five years from now you will not recognize the life.",
+				"unit": "a life",
+				"status": "known",
+				"complement": "eisenhower",
+				"url": "https://rulerofwisdom.com/forum/slight-edge/",
+				"parts": [
+					{
+						"key": "show-up",
+						"label": "Show up",
+						"depth": "Be there. The easy thing you can skip. Skipping is how the falling curve starts."
+					},
+					{
+						"key": "consistent",
+						"label": "Be consistent",
+						"depth": "Again tomorrow. Once is a mood. Daily is a life."
+					},
+					{
+						"key": "outlook",
+						"label": "Positive outlook",
+						"depth": "Assume the compound is real. Cynicism is a way to quit without quitting."
+					},
+					{
+						"key": "long-haul",
+						"label": "The long haul",
+						"depth": "Think in years. The daily thing is too small to feel like it matters. That is the trick."
+					},
+					{
+						"key": "faith",
+						"label": "Faith and desire",
+						"depth": "Want it enough to keep the boring reps when nobody is clapping."
+					},
+					{
+						"key": "price",
+						"label": "Pay the price",
+						"depth": "The cost is small and daily, or large and later. You pick which."
+					},
+					{
+						"key": "integrity",
+						"label": "Slight-edge integrity",
+						"depth": "Do the easy thing when it would be just as easy not to. That is the whole fork."
+					}
+				]
+			},
+			{
+				"slug": "rice",
+				"z": 10,
+				"symbol": "Ri",
+				"name": "RICE",
+				"source": "Andrew Bustamante",
+				"group": "needs",
+				"period": 1,
+				"n": 4,
+				"law": "In the moment a person moves for reward, ideology, coercion, or ego. Ideology holds. Coercion burns the trust.",
+				"story": "You want to know why they moved. The problem is you believed the story they told their mouth. In the moment a person moves for reward, ideology, coercion, or ego. Name the lever. Guess and you will pull the wrong one and call them difficult. Name it and you know what they will cost.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "sadrat",
+				"url": "https://rulerofwisdom.com/forum/rice/",
+				"parts": [
+					{
+						"key": "reward",
+						"label": "Reward",
+						"mark": "R",
+						"blurb": "Do I get something.",
+						"depth": "They moved because something is coming. Cheap to buy. Cheap to lose."
+					},
+					{
+						"key": "ideology",
+						"label": "Ideology",
+						"mark": "I",
+						"blurb": "Do I believe something.",
+						"depth": "They moved because it is who they are. This one holds. Do not try to outbid it."
+					},
+					{
+						"key": "coercion",
+						"label": "Coercion",
+						"mark": "C",
+						"blurb": "Do I avoid something.",
+						"depth": "They moved because something worse is behind them. It works. It burns the trust."
+					},
+					{
+						"key": "ego",
+						"label": "Ego",
+						"mark": "E",
+						"blurb": "How do I look.",
+						"depth": "They moved because of the mirror. Status, face, the story of themselves."
+					}
+				]
+			},
+			{
+				"slug": "perception-perspective",
+				"z": 13,
+				"symbol": "Pp",
+				"name": "Perception and perspective",
+				"source": "Andrew Bustamante",
+				"group": "skill",
+				"period": 2,
+				"n": 2,
+				"law": "Perception is what your senses report. Perspective is stepping out of them. You cannot trust the first.",
+				"story": "You want to see what is actually there. The problem is your senses report a movie starring you. Perception is the movie. Perspective is standing in their place. Trust the first and you will fight ghosts. Take the second and the person in front of you shows up.",
+				"unit": "a person",
+				"status": "known",
+				"complement": "three-lives",
+				"url": "https://rulerofwisdom.com/forum/perception-perspective/",
+				"parts": [
+					{
+						"key": "perception",
+						"label": "Perception",
+						"blurb": "What your senses give you.",
+						"depth": "The movie starring you. Fast, vivid, and usually wrong about the other person."
+					},
+					{
+						"key": "perspective",
+						"label": "Perspective",
+						"blurb": "Standing in the other person's place.",
+						"depth": "Step out of the movie. Ask what they can see from where they stand. Then you can talk."
+					}
+				]
+			},
+			{
+				"slug": "three-lives",
+				"z": 14,
+				"symbol": "3L",
+				"name": "Three lives",
+				"source": "Andrew Bustamante",
+				"group": "meaning",
+				"period": 2,
+				"n": 3,
+				"law": "Everyone has a public life, a private life, and a secret life. What you meet first is the performance.",
+				"story": "You want to know who you are talking to. The problem is you met the public life and thought it was the person. Everyone has public, private, and secret. The first is a performance. Stay in public and you will recruit a mask. Name which life you are in and the conversation can start.",
+				"unit": "a person",
+				"status": "known",
+				"complement": "perception-perspective",
+				"url": "https://rulerofwisdom.com/forum/three-lives/",
+				"parts": [
+					{
+						"key": "public",
+						"label": "Public life",
+						"blurb": "What you want seen.",
+						"depth": "The performance. What a stranger, a feed, a room is allowed to meet."
+					},
+					{
+						"key": "private",
+						"label": "Private life",
+						"blurb": "What the inner circle sees.",
+						"depth": "The people who have a key. Still a selection. Not the whole person."
+					},
+					{
+						"key": "secret",
+						"label": "Secret life",
+						"blurb": "What nobody is told.",
+						"depth": "What would change the room if it landed. You do not get this on the first meeting."
+					}
+				]
+			},
+			{
+				"slug": "sadrat",
+				"z": 15,
+				"symbol": "Sd",
+				"name": "SADRAT",
+				"source": "Andrew Bustamante",
+				"group": "skill",
+				"period": 4,
+				"n": 6,
+				"law": "A source is spotted, assessed, developed, recruited, handled, and ended. Skip a step and you have a hope, not an asset.",
+				"story": "You want a relationship that is an asset, not a hope. The problem is you skip from spotting to asking. Spot, assess, develop, recruit, handle, terminate. Skip assess and you have a chat. Walk the cycle and you have someone who can actually move.",
+				"unit": "a relationship",
+				"status": "known",
+				"complement": "rice",
+				"url": "https://rulerofwisdom.com/forum/sadrat/",
+				"parts": [
+					{
+						"key": "spot",
+						"label": "Spot",
+						"mark": "S",
+						"depth": "See them. Access, placement, a reason they might talk. Not a vibe — a notice."
+					},
+					{
+						"key": "assess",
+						"label": "Assess",
+						"mark": "A",
+						"depth": "Can they actually move what you need? Skip this and you have a chat, not an asset."
+					},
+					{
+						"key": "develop",
+						"label": "Develop",
+						"mark": "D",
+						"depth": "Build the relationship until a ask would not be a shock."
+					},
+					{
+						"key": "recruit",
+						"label": "Recruit",
+						"mark": "R",
+						"depth": "The ask. They say yes to a role, not to a feeling."
+					},
+					{
+						"key": "handle",
+						"label": "Handle",
+						"mark": "A",
+						"depth": "Keep them useful and safe. This is the work after the yes."
+					},
+					{
+						"key": "terminate",
+						"label": "Terminate",
+						"mark": "T",
+						"depth": "End it clean. A source that never ends is a hope you are afraid to count."
+					}
+				]
+			},
+			{
+				"slug": "four-agreements",
+				"z": 16,
+				"symbol": "4A",
+				"name": "The Four Agreements",
+				"source": "Don Miguel Ruiz",
+				"group": "identity",
+				"period": 1,
+				"n": 4,
+				"law": "Four agreements. Break one in the moment and the rest are a speech.",
+				"story": "You want to keep yourself in the moment. The problem is a speech about who you are while you take it personally, assume, and phone in the hour. Four agreements. Break one and the rest are wallpaper. Keep them in the ninety seconds and the pattern does not get to drive.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "archetypes",
+				"url": "https://rulerofwisdom.com/forum/four-agreements/",
+				"parts": [
+					{
+						"key": "word",
+						"label": "Be impeccable with your word",
+						"mark": "1",
+						"depth": "Say only what is true and what you will stand behind. Gossip is a leak in the hour."
+					},
+					{
+						"key": "personally",
+						"label": "Don't take anything personally",
+						"mark": "2",
+						"depth": "Their mouth is about them. If you swallow it, their weather becomes your day."
+					},
+					{
+						"key": "assumptions",
+						"label": "Don't make assumptions",
+						"mark": "3",
+						"depth": "Ask. The story you invented is usually a fight you scheduled with a ghost."
+					},
+					{
+						"key": "best",
+						"label": "Always do your best",
+						"mark": "4",
+						"depth": "Today's best, not yesterday's speech. Phone it in and the other three are wallpaper."
+					}
+				]
+			},
+			{
+				"slug": "grow",
+				"z": 19,
+				"symbol": "Gw",
+				"name": "GROW",
+				"source": "John Whitmore",
+				"group": "decision",
+				"period": 1,
+				"n": 4,
+				"law": "A choice has a Goal, a Reality, Options, and a Will. Skip Will and you had a conversation.",
+				"story": "You want a sitting that ends in a move. The problem is you had a good conversation and called it a decision. Goal, Reality, Options, Will. Skip Will and you had coffee. Name Will and the sitting is a choice.",
+				"unit": "a sitting",
+				"status": "known",
+				"complement": "rpm",
+				"url": "https://rulerofwisdom.com/forum/grow/",
+				"parts": [
+					{
+						"key": "goal",
+						"label": "Goal",
+						"mark": "G",
+						"blurb": "Where you are going.",
+						"depth": "Name the destination in a sentence they could repeat. Vague goals produce vague sittings."
+					},
+					{
+						"key": "reality",
+						"label": "Reality",
+						"mark": "R",
+						"blurb": "Where you are.",
+						"depth": "The facts of now, not the hope. Skip this and Options are fan fiction."
+					},
+					{
+						"key": "options",
+						"label": "Options",
+						"mark": "O",
+						"blurb": "What you could do.",
+						"depth": "More than two. If you only have yes and no, you have not looked yet."
+					},
+					{
+						"key": "will",
+						"label": "Will",
+						"mark": "W",
+						"blurb": "What you will do.",
+						"depth": "The move, the date, the name. Skip this and you had coffee."
+					}
+				]
+			},
+			{
+				"slug": "rpm",
+				"z": 20,
+				"symbol": "Rp",
+				"name": "Rapid Planning Method",
+				"source": "Tony Robbins",
+				"group": "time",
+				"period": 3,
+				"n": 3,
+				"law": "A to-do list is a lie. Name the Result, the Purpose, and the Massive Action Plan. That is the week.",
+				"story": "You want a week that is pointed at something. The problem is the to-do list is a pile of other people's urgency. Result, Purpose, Massive Action Plan. That is the week. Keep the list and you will be busy in someone else's story. Name the Result and the list has to earn its place.",
+				"unit": "a week",
+				"status": "known",
+				"complement": "grow",
+				"url": "https://rulerofwisdom.com/forum/rpm/",
+				"parts": [
+					{
+						"key": "result",
+						"label": "Result",
+						"mark": "R",
+						"blurb": "What you want.",
+						"depth": "The outcome, not the chore. If you cannot name this, the list is other people's week."
+					},
+					{
+						"key": "purpose",
+						"label": "Purpose",
+						"mark": "P",
+						"blurb": "Why it matters.",
+						"depth": "The reason that still holds on a tired Thursday. No purpose, no fuel."
+					},
+					{
+						"key": "map",
+						"label": "Massive Action Plan",
+						"mark": "M",
+						"blurb": "The how.",
+						"depth": "The moves, in order, that could actually produce the Result. A to-do list is not this."
+					}
+				]
+			},
+			{
+				"slug": "six-hats",
+				"z": 18,
+				"symbol": "6H",
+				"name": "Six Thinking Hats",
+				"source": "Edward de Bono",
+				"group": "decision",
+				"period": 4,
+				"n": 6,
+				"law": "A room thinks in six hats. One color at a time, or it is an argument.",
+				"story": "You want a room that can think. The problem is six conversations happening at once, so it is an argument. One hat at a time. Skip the color and the loudest person wins. Wear one color and the room can actually see.",
+				"unit": "a room",
+				"status": "known",
+				"complement": "scarf",
+				"url": "https://rulerofwisdom.com/forum/six-hats/",
+				"parts": [
+					{
+						"key": "white",
+						"label": "Facts",
+						"blurb": "White hat.",
+						"hue": "#8b93a3",
+						"depth": "Only what is known. No opinion yet. The room has to agree on the facts before it argues."
+					},
+					{
+						"key": "red",
+						"label": "Feelings",
+						"blurb": "Red hat.",
+						"hue": "#e05a30",
+						"depth": "Gut, fear, excitement — named, not dressed up as data. Then take the hat off."
+					},
+					{
+						"key": "black",
+						"label": "Caution",
+						"blurb": "Black hat.",
+						"hue": "#3a4150",
+						"depth": "What could go wrong. Wear it on purpose or it will crash the other five."
+					},
+					{
+						"key": "yellow",
+						"label": "Benefits",
+						"blurb": "Yellow hat.",
+						"hue": "#d4a843",
+						"depth": "Why it might work. The case for yes, without pretending there is no black hat."
+					},
+					{
+						"key": "green",
+						"label": "Creativity",
+						"blurb": "Green hat.",
+						"hue": "#2f9d78",
+						"depth": "New moves. No killing ideas while this hat is on. That is black's job, later."
+					},
+					{
+						"key": "blue",
+						"label": "Process",
+						"blurb": "Blue hat.",
+						"hue": "#2f86c0",
+						"depth": "Who is wearing what, and when. Without this, the room is six conversations at once."
+					}
+				]
+			},
+			{
+				"slug": "scarf",
+				"z": 21,
+				"symbol": "Sf",
+				"name": "SCARF",
+				"source": "David Rock",
+				"group": "needs",
+				"period": 4,
+				"n": 5,
+				"law": "A room is fed or threatened on five: status, certainty, autonomy, relatedness, fairness.",
+				"story": "You want a room that can work. The problem is someone just threatened status, certainty, autonomy, relatedness, or fairness — and now nobody can hear. Feed the five, or stop threatening them. Ignore the hunger and the hats are theater. Name the threat and the room comes back.",
+				"unit": "a room",
+				"status": "known",
+				"complement": "six-hats",
+				"url": "https://rulerofwisdom.com/forum/scarf/",
+				"parts": [
+					{
+						"key": "status",
+						"label": "Status",
+						"depth": "Relative rank in the room. A public demotion shuts thinking down."
+					},
+					{
+						"key": "certainty",
+						"label": "Certainty",
+						"depth": "Knowing what happens next. Surprise that was not chosen feels like a threat."
+					},
+					{
+						"key": "autonomy",
+						"label": "Autonomy",
+						"depth": "A say in the move. Micromanage this and the room complies instead of thinking."
+					},
+					{
+						"key": "relatedness",
+						"label": "Relatedness",
+						"depth": "In or out. Isolation in a team is a threat, not a personality."
+					},
+					{
+						"key": "fairness",
+						"label": "Fairness",
+						"depth": "The split looks honest. If it does not, nobody is listening to the hats."
+					}
+				]
+			},
+			{
+				"slug": "golden-circle",
+				"z": 24,
+				"symbol": "GC",
+				"name": "The Golden Circle",
+				"source": "Simon Sinek",
+				"group": "meaning",
+				"period": 4,
+				"n": 3,
+				"law": "What you do is the outside. Why you do it is the core. People do not buy the What.",
+				"story": "You want people to come with you. The problem is you keep leading with what you do. Why is the core. How is the way. What is the proof. Start on What and you are competing on features. Start on Why and people recognize themselves.",
+				"unit": "a people",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/golden-circle/",
+				"parts": [
+					{
+						"key": "what",
+						"label": "What",
+						"depth": "The proof. The product, the episode, the thing they can point at. Do not lead with this."
+					},
+					{
+						"key": "how",
+						"label": "How",
+						"depth": "The way you do it. Differentiation lives here — still not the reason they come."
+					},
+					{
+						"key": "why",
+						"label": "Why",
+						"depth": "The core. Why you exist. People do not buy the What. They recognize themselves in this."
+					}
+				]
+			},
+			{
+				"slug": "five-dysfunctions",
+				"z": 22,
+				"symbol": "5D",
+				"name": "Five dysfunctions",
+				"source": "Patrick Lencioni",
+				"group": "identity",
+				"period": 4,
+				"n": 5,
+				"law": "A team fails from the bottom: no trust, then no conflict, then no commitment, then no accountability, then no results.",
+				"story": "You want a team that gets results. The problem is you keep treating symptoms at the top of the pyramid. No trust, then no conflict, then no commitment, then no accountability, then no results. Skip trust and the rest is a retreat. Build from the bottom and results have somewhere to stand.",
+				"unit": "a team",
+				"status": "known",
+				"complement": "tuckman",
+				"url": "https://rulerofwisdom.com/forum/five-dysfunctions/",
+				"parts": [
+					{
+						"key": "trust",
+						"label": "No trust",
+						"blurb": "Absence of trust.",
+						"depth": "The floor. Without it, nobody will be ugly in front of each other. Build this first."
+					},
+					{
+						"key": "conflict",
+						"label": "No conflict",
+						"blurb": "Fear of conflict.",
+						"depth": "Artificial harmony. The fight went underground. You cannot skip this stage of a team."
+					},
+					{
+						"key": "commitment",
+						"label": "No commitment",
+						"blurb": "Lack of commitment.",
+						"depth": "They did not buy in because they never got to disagree. Nodding is not this."
+					},
+					{
+						"key": "accountability",
+						"label": "No accountability",
+						"blurb": "Avoidance of accountability.",
+						"depth": "Nobody will name the miss. Kindness that protects the miss is how results die."
+					},
+					{
+						"key": "results",
+						"label": "No results",
+						"blurb": "Inattention to results.",
+						"depth": "The top of the pyramid. Treat this first and you are treating a symptom."
+					}
+				]
+			},
+			{
+				"slug": "tuckman",
+				"z": 23,
+				"symbol": "Tk",
+				"name": "Tuckman",
+				"source": "Bruce Tuckman",
+				"group": "time",
+				"period": 4,
+				"n": 4,
+				"law": "A room is forming, storming, norming, or performing. You do not skip storming.",
+				"story": "You want a room that performs. The problem is you keep trying to skip the ugly week. Forming, storming, norming, performing. You do not skip storming. Pretend you are already performing and the storm goes underground. Name the stage and the storm is work, not a failure.",
+				"unit": "a team",
+				"status": "known",
+				"complement": "five-dysfunctions",
+				"url": "https://rulerofwisdom.com/forum/tuckman/",
+				"parts": [
+					{
+						"key": "forming",
+						"label": "Forming",
+						"mark": "F",
+						"depth": "Polite. Roles are guesses. Do not mistake this for performing."
+					},
+					{
+						"key": "storming",
+						"label": "Storming",
+						"mark": "S",
+						"depth": "The ugly week. You do not skip it. Pretend you did and it goes underground."
+					},
+					{
+						"key": "norming",
+						"label": "Norming",
+						"mark": "N",
+						"depth": "The room has a way. Agreements start to hold. Still not the peak."
+					},
+					{
+						"key": "performing",
+						"label": "Performing",
+						"mark": "P",
+						"depth": "The work moves. You earned this by not skipping storming."
+					}
+				]
+			},
+			{
+				"slug": "four-horsemen",
+				"z": 27,
+				"symbol": "Fh",
+				"name": "Four horsemen",
+				"source": "John Gottman",
+				"group": "fears",
+				"period": 4,
+				"n": 4,
+				"law": "A room dies by criticism, contempt, defensiveness, or stonewalling. Contempt is the kill shot.",
+				"story": "You want a relationship that does not die in the room. The problem is the kill shots look like ordinary talk: criticism, contempt, defensiveness, stonewalling. Contempt is the one that ends it. Leave them unnamed and the room will feel like weather. Name the horseman and you still have a chance to turn.",
+				"unit": "a relationship",
+				"status": "known",
+				"complement": "drama-triangle",
+				"url": "https://rulerofwisdom.com/forum/four-horsemen/",
+				"parts": [
+					{
+						"key": "criticism",
+						"label": "Criticism",
+						"depth": "You are the problem, not the act. A complaint can be survived. This starts the four."
+					},
+					{
+						"key": "contempt",
+						"label": "Contempt",
+						"depth": "The kill shot. Eye-roll, mockery, disgust. Gottman can see the end from here."
+					},
+					{
+						"key": "defensiveness",
+						"label": "Defensiveness",
+						"depth": "The counter-attack, or the innocent victim. Nothing lands because the shield is up."
+					},
+					{
+						"key": "stonewalling",
+						"label": "Stonewalling",
+						"depth": "The shutdown. Heart rate up, mouth closed. The room is empty while they sit there."
+					}
+				]
+			},
+			{
+				"slug": "deep-work",
+				"z": 26,
+				"symbol": "Dw",
+				"name": "Deep work",
+				"source": "Cal Newport",
+				"group": "time",
+				"period": 1,
+				"n": 2,
+				"law": "A block is deep or shallow. Urgent is usually shallow.",
+				"story": "You want an hour that actually makes something. The problem is urgency has dressed itself as work. A block is deep or shallow. Protect the deep. Answer every ping and you will have a full calendar and an empty craft. Close the door and the hour is yours.",
+				"unit": "a block",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/deep-work/",
+				"parts": [
+					{
+						"key": "deep",
+						"label": "Deep",
+						"blurb": "Hard to replicate.",
+						"depth": "The hour that makes the thing. Close the door. Urgent is usually not this."
+					},
+					{
+						"key": "shallow",
+						"label": "Shallow",
+						"blurb": "Easy to interrupt.",
+						"depth": "Mail, pings, meetings that could have been a sentence. Necessary in doses. Fatal as a diet."
+					}
+				]
+			},
+			{
+				"slug": "wrap",
+				"z": 25,
+				"symbol": "Wp",
+				"name": "WRAP",
+				"source": "Chip and Dan Heath",
+				"group": "decision",
+				"period": 3,
+				"n": 4,
+				"law": "A life choice: Widen, Reality-test, Attain distance, Prepare to be wrong. From the gut is a sitting without the distance.",
+				"story": "You want a life choice you will still respect in five years. The problem is the gut is loud and the options are two. Widen, reality-test, attain distance, prepare to be wrong. Decide from the gut and you will own a sitting you did not take. Take the distance and the choice can bear the years.",
+				"unit": "a life choice",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/wrap/",
+				"parts": [
+					{
+						"key": "widen",
+						"label": "Widen options",
+						"mark": "W",
+						"depth": "More than two. Yes/no is a trap. Find a third road before you pick."
+					},
+					{
+						"key": "reality",
+						"label": "Reality-test",
+						"mark": "R",
+						"depth": "Ask the world, not your hope. Who has done this. What did it cost."
+					},
+					{
+						"key": "attain",
+						"label": "Attain distance",
+						"mark": "A",
+						"depth": "10-10-10, or the older you. The gut is loud. Distance is the sitting."
+					},
+					{
+						"key": "prepare",
+						"label": "Prepare to be wrong",
+						"mark": "P",
+						"depth": "A tripwire. What would tell you this choice failed, before you are too far in."
+					}
+				]
+			},
+			{
+				"slug": "love-languages",
+				"z": 28,
+				"symbol": "5L",
+				"name": "Five love languages",
+				"source": "Gary Chapman",
+				"group": "needs",
+				"period": 2,
+				"n": 5,
+				"law": "A person feels loved in one of five: words, time, gifts, service, or touch. You are probably speaking yours.",
+				"story": "You want to feel loved, and to love someone so they can feel it. The problem is you keep giving the language you wish you were getting. Five languages: words, time, gifts, service, touch. Speak yours and you will starve in a full house. Speak theirs and the house is fed.",
+				"unit": "a person",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/love-languages/",
+				"parts": [
+					{
+						"key": "words",
+						"label": "Words of affirmation",
+						"depth": "They feel loved when you say it. Silence reads as absence, even if you are loyal."
+					},
+					{
+						"key": "time",
+						"label": "Quality time",
+						"depth": "Undivided presence. Gifts and chores will not cover a phone on the table."
+					},
+					{
+						"key": "gifts",
+						"label": "Receiving gifts",
+						"depth": "A thing that says I thought of you. Cheap or costly is not the point. The noticing is."
+					},
+					{
+						"key": "service",
+						"label": "Acts of service",
+						"depth": "You did the thing they were carrying. Words without the act bounce off."
+					},
+					{
+						"key": "touch",
+						"label": "Physical touch",
+						"depth": "The body is the language. A speech from across the room will not land."
+					}
+				]
+			},
+			{
+				"slug": "ikigai",
+				"z": 29,
+				"symbol": "Ik",
+				"name": "Ikigai",
+				"source": "Japanese; the four-circle teaching",
+				"group": "meaning",
+				"period": 3,
+				"n": 4,
+				"law": "A life reason sits where what you love, what you are good at, what the world needs, and what you can be paid for overlap.",
+				"story": "You want a reason to get up. The problem is you have a job, or a passion, or a cause — one circle, not four. What you love, what you are good at, what the world needs, what you can be paid for. Live in one circle and you will be busy or broke or both. Stand in the overlap and the days have a why.",
+				"unit": "a life",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/ikigai/",
+				"parts": [
+					{
+						"key": "love",
+						"label": "What you love",
+						"depth": "The pull. Without this, a paid skill is a job you will resent."
+					},
+					{
+						"key": "good",
+						"label": "What you are good at",
+						"depth": "The craft. Love without this is a hobby that cannot hold a life."
+					},
+					{
+						"key": "need",
+						"label": "What the world needs",
+						"depth": "The hole you fill for someone else. Skip this and the days are only about you."
+					},
+					{
+						"key": "paid",
+						"label": "What you can be paid for",
+						"depth": "The market. A calling that cannot eat is a speech. Stand in the overlap."
+					}
+				]
+			},
+			{
+				"slug": "five-whys",
+				"z": 30,
+				"symbol": "5W",
+				"name": "Five whys",
+				"source": "Taiichi Ohno / Toyota",
+				"group": "meaning",
+				"period": 1,
+				"n": 5,
+				"law": "The first why is a story. The fifth why is the cause. Stop at one and you will fix a symptom.",
+				"story": "You want the real problem, not the first story. The problem is you stop at the first why. Ask why five times. Stop at one and you will fix a symptom until it grows back. Reach the fifth and the work has an address.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/five-whys/",
+				"parts": [
+					{
+						"key": "why-1",
+						"label": "Why 1",
+						"blurb": "The story you were told.",
+						"depth": "The first answer. It is almost always a story. Do not fix from here."
+					},
+					{
+						"key": "why-2",
+						"label": "Why 2",
+						"depth": "Under the story. Still usually a symptom."
+					},
+					{
+						"key": "why-3",
+						"label": "Why 3",
+						"depth": "The pattern showing up. You have seen this before, under another name."
+					},
+					{
+						"key": "why-4",
+						"label": "Why 4",
+						"depth": "The structure that makes the pattern cheap to repeat."
+					},
+					{
+						"key": "why-5",
+						"label": "Why 5",
+						"blurb": "The cause that can be fixed.",
+						"depth": "The cause with an address. Stop here. Not at one."
+					}
+				]
+			},
+			{
+				"slug": "iceberg",
+				"z": 31,
+				"symbol": "Ib",
+				"name": "Iceberg model",
+				"source": "Peter Senge / systems thinking",
+				"group": "decision",
+				"period": 1,
+				"n": 4,
+				"law": "The event is the tip. Under it: patterns, structures, mental models. Decide from the tip and you will fight the same wave.",
+				"story": "You want a decision that treats the real thing. The problem is you are staring at the event and calling it the whole ocean. Events sit on patterns, patterns on structures, structures on mental models. Decide from the tip and you will fight the same wave. Look down and the wave has a floor.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/iceberg/",
+				"parts": [
+					{
+						"key": "models",
+						"label": "Mental models",
+						"blurb": "The beliefs underneath.",
+						"depth": "The beliefs that built the structure. Change these or the wave comes back."
+					},
+					{
+						"key": "structures",
+						"label": "Structures",
+						"blurb": "What makes the pattern.",
+						"depth": "Incentives, rules, layout. What makes the pattern cheap to repeat."
+					},
+					{
+						"key": "patterns",
+						"label": "Patterns",
+						"blurb": "What keeps happening.",
+						"depth": "Not a one-off. The same wave in a new shirt."
+					},
+					{
+						"key": "events",
+						"label": "Events",
+						"blurb": "What just happened — the tip.",
+						"depth": "What you can see. Decide only from here and you will fight the same wave."
+					}
+				]
+			},
+			{
+				"slug": "drama-triangle",
+				"z": 32,
+				"symbol": "Dt",
+				"name": "Drama triangle",
+				"source": "Stephen Karpman",
+				"group": "fears",
+				"period": 1,
+				"n": 3,
+				"law": "In the moment the fear picks a corner: victim, persecutor, or rescuer. Switch corners if you want — you have not left the triangle.",
+				"story": "You want out of a fight that keeps changing costumes. The problem is you think you are in a new scene. You are in a triangle: victim, persecutor, rescuer. Name the corner. Stay unnamed and you will rotate until you are tired. Name it and you can step off — which is the only move that is not another corner.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "four-horsemen",
+				"url": "https://rulerofwisdom.com/forum/drama-triangle/",
+				"parts": [
+					{
+						"key": "persecutor",
+						"label": "Persecutor",
+						"depth": "It's your fault. Blame, control, the pointed finger. Not-enough with a weapon."
+					},
+					{
+						"key": "victim",
+						"label": "Victim",
+						"depth": "This is happening to me. Helpless, hunted. Not-loved with a story."
+					},
+					{
+						"key": "rescuer",
+						"label": "Rescuer",
+						"depth": "I will save you — without being asked. Help that keeps the victim a victim. Significance dressed as care."
+					}
+				]
+			},
+			{
+				"slug": "attachment",
+				"z": 33,
+				"symbol": "At",
+				"name": "Attachment styles",
+				"source": "John Bowlby / Mary Ainsworth / Kim Bartholomew",
+				"group": "fears",
+				"period": 3,
+				"n": 4,
+				"law": "A life with other people is one of four: secure, anxious, avoidant, or fearful. The two fears, over years, become a style.",
+				"story": "You want a love that holds. The problem is you keep living the same year with a new face. Four styles: secure, anxious, avoidant, fearful. They sit on two questions — am I enough, will they stay. Leave the style unnamed and every fork is the childhood again. Name it and the next person is a person, not a rerun.",
+				"unit": "a life",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/attachment/",
+				"parts": [
+					{
+						"key": "secure",
+						"label": "Secure",
+						"blurb": "Enough, and they stay.",
+						"depth": "I am worthy. They will be there. Close is safe. Space is not a threat."
+					},
+					{
+						"key": "anxious",
+						"label": "Anxious",
+						"blurb": "Not enough. They might stay.",
+						"depth": "Preoccupied. I am not enough, so I cling. Silence is abandonment. Not-loved running a life."
+					},
+					{
+						"key": "avoidant",
+						"label": "Avoidant",
+						"blurb": "Enough. They will leave.",
+						"depth": "Dismissing. I am fine alone. Close is a trap. Not-enough dressed as not needing anyone."
+					},
+					{
+						"key": "fearful",
+						"label": "Fearful",
+						"blurb": "Not enough, and they leave.",
+						"depth": "Fearful-avoidant. Want them close, freeze when they are. Both fears at once. The year that will not settle."
+					}
+				]
+			},
+			{
+				"slug": "cynefin",
+				"z": 34,
+				"symbol": "Cy",
+				"name": "Cynefin",
+				"source": "Dave Snowden",
+				"group": "decision",
+				"period": 4,
+				"n": 5,
+				"law": "A room is in one of five: clear, complicated, complex, chaotic, or disorder. The move that works in one will wreck the others.",
+				"story": "You want a decision that fits the kind of problem you are in. The problem is you brought a checklist into a fire, or a brainstorm into a recipe. Five domains. Name which one the room is in. Skip it and you will act like the last meeting you survived. Name it and the next move is allowed to be a different kind of move.",
+				"unit": "a room",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/cynefin/",
+				"parts": [
+					{
+						"key": "complex",
+						"label": "Complex",
+						"blurb": "Probe, sense, respond.",
+						"depth": "Cause and effect are only obvious after. Probe. Then sense. Then respond. A plan here is a guess with a budget."
+					},
+					{
+						"key": "complicated",
+						"label": "Complicated",
+						"blurb": "Sense, analyze, respond.",
+						"depth": "Experts can find the cause. Sense, analyze, respond. Good practice, not one recipe. Bring the specialist."
+					},
+					{
+						"key": "chaotic",
+						"label": "Chaotic",
+						"blurb": "Act, sense, respond.",
+						"depth": "No cause you can find from here. Act to stabilize, then sense, then respond. A meeting in a fire is how people die."
+					},
+					{
+						"key": "clear",
+						"label": "Clear",
+						"blurb": "Sense, categorize, respond.",
+						"depth": "The recipe works. Sense, categorize, respond. Best practice lives here. Inventing in a recipe is how you burn the room."
+					},
+					{
+						"key": "disorder",
+						"label": "Disorder",
+						"blurb": "You don't know which.",
+						"depth": "You have not named the domain. People argue from the domain they like. Name it or the loudest person picks."
+					}
+				]
+			},
+			{
+				"slug": "ooda",
+				"z": 35,
+				"symbol": "Oo",
+				"name": "OODA",
+				"source": "John Boyd",
+				"group": "skill",
+				"period": 1,
+				"n": 4,
+				"law": "A moment is Observe, Orient, Decide, Act. Then again. Whoever loops faster owns the moment.",
+				"story": "You want to be inside the other person's loop. The problem is you are still collecting facts while they are already moving. Observe, Orient, Decide, Act — then again. Freeze on Orient and you will be decided for. Loop and the moment is yours.",
+				"unit": "a moment",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/ooda/",
+				"parts": [
+					{
+						"key": "observe",
+						"label": "Observe",
+						"mark": "O",
+						"depth": "What is actually in front of you. Not the briefing. The scene. Skip this and Orient is a movie."
+					},
+					{
+						"key": "orient",
+						"label": "Orient",
+						"mark": "O",
+						"depth": "The heavy one. Culture, training, the story you brought. Most people never leave here. That is how they lose."
+					},
+					{
+						"key": "decide",
+						"label": "Decide",
+						"mark": "D",
+						"depth": "A hypothesis, not a personality. Pick. Waiting is also a decision — usually theirs."
+					},
+					{
+						"key": "act",
+						"label": "Act",
+						"mark": "A",
+						"depth": "The move. Then you are observing again. A loop that does not act is a briefing."
+					}
+				]
+			},
+			{
+				"slug": "seven-powers",
+				"z": 36,
+				"symbol": "7P",
+				"name": "7 Powers",
+				"source": "Hamilton Helmer",
+				"group": "identity",
+				"period": 3,
+				"n": 7,
+				"law": "A company lasts by one of seven: scale, network, counter-positioning, switching costs, brand, cornered resource, or process. No power, no duration.",
+				"story": "You want a business that still exists in ten years. The problem is you have a product and a hope. Seven powers. Name which one you actually have. Skip the name and you will confuse a busy quarter with a moat. Name it and you know what to protect — and what is just a good month.",
+				"unit": "a company",
+				"status": "known",
+				"complement": "business-model-canvas",
+				"url": "https://rulerofwisdom.com/forum/seven-powers/",
+				"parts": [
+					{
+						"key": "scale",
+						"label": "Scale economies",
+						"depth": "Unit cost falls as you grow. The lead becomes cheaper to keep. Without volume this is a wish."
+					},
+					{
+						"key": "network",
+						"label": "Network effects",
+						"depth": "Each new user makes it more valuable for the rest. The crowd is the product. Empty, it is a chat room."
+					},
+					{
+						"key": "counter",
+						"label": "Counter-positioning",
+						"depth": "A new model the incumbent cannot copy without wrecking their own. They see you. They still cannot move."
+					},
+					{
+						"key": "switching",
+						"label": "Switching costs",
+						"depth": "Leaving hurts more than staying. Habit, data, relationships. A discount does not buy this."
+					},
+					{
+						"key": "brand",
+						"label": "Branding",
+						"depth": "They pay more because it is you, on objective sameness. Years of a promise kept. A logo is not this."
+					},
+					{
+						"key": "cornered",
+						"label": "Cornered resource",
+						"depth": "You have the thing they cannot get: the right, the mine, the person, the patent. Preferential access, not a vibe."
+					},
+					{
+						"key": "process",
+						"label": "Process power",
+						"depth": "The way you work cannot be copied by watching. It lives in the people. A manual is not this."
+					}
+				]
+			},
+			{
+				"slug": "business-model-canvas",
+				"z": 37,
+				"symbol": "Bm",
+				"name": "Business Model Canvas",
+				"source": "Alexander Osterwalder / Yves Pigneur",
+				"group": "identity",
+				"period": 4,
+				"n": 9,
+				"law": "A company is nine blocks: who you serve, what you offer, how it reaches them, how it costs, how it pays. Miss a block and you have a hobby with a logo.",
+				"story": "You want a business you can see on one page. The problem is the story lives in twelve decks and nobody can point at how money comes in. Nine blocks. Draw them. Leave a block blank and you will find out in payroll. Fill them and the argument has a picture.",
+				"unit": "a company",
+				"status": "known",
+				"complement": "seven-powers",
+				"url": "https://rulerofwisdom.com/forum/business-model-canvas/",
+				"parts": [
+					{
+						"key": "partners",
+						"label": "Key Partners",
+						"mark": "KP",
+						"depth": "Who you cannot do this without. Suppliers, alliances. A partner you do not need is a meeting."
+					},
+					{
+						"key": "activities",
+						"label": "Key Activities",
+						"mark": "KA",
+						"depth": "What you must keep doing or the offer dies. Not the busywork. The few moves."
+					},
+					{
+						"key": "resources",
+						"label": "Key Resources",
+						"mark": "KR",
+						"depth": "What you must have: people, capital, IP, the machine. Renting this is also a choice."
+					},
+					{
+						"key": "value",
+						"label": "Value Propositions",
+						"mark": "VP",
+						"depth": "Why they pick you. The job they hire you for. Features are not this."
+					},
+					{
+						"key": "relationships",
+						"label": "Customer Relationships",
+						"mark": "CR",
+						"depth": "How you hold them: personal, automated, community. This is where switching costs are born or not."
+					},
+					{
+						"key": "channels",
+						"label": "Channels",
+						"mark": "CH",
+						"depth": "How the offer reaches them and how they reach you. A channel you do not own is a landlord."
+					},
+					{
+						"key": "segments",
+						"label": "Customer Segments",
+						"mark": "CS",
+						"depth": "Who it is for. Everyone is no one. Name the person who pays."
+					},
+					{
+						"key": "costs",
+						"label": "Cost Structure",
+						"mark": "C$",
+						"depth": "What it costs to keep the other eight alive. Fixed, variable, the ones that scale with hope."
+					},
+					{
+						"key": "revenue",
+						"label": "Revenue Streams",
+						"mark": "R$",
+						"depth": "How money actually arrives. Price, repeat, one-shot. A story about later is not a stream."
+					}
+				]
+			},
+			{
+				"slug": "balanced-scorecard",
+				"z": 38,
+				"symbol": "Bs",
+				"name": "Balanced Scorecard",
+				"source": "Robert Kaplan / David Norton",
+				"group": "time",
+				"period": 4,
+				"n": 4,
+				"law": "A room keeps score on four: money, customer, insides, and learning. One number is a lie about a company.",
+				"story": "You want to know if the company is actually working. The problem is the dashboard is only money, and money is a lag. Four perspectives. Skip the last three and you will hit the number while the engine dies. Keep all four and a good quarter has somewhere to stand.",
+				"unit": "a company",
+				"status": "known",
+				"complement": "",
+				"url": "https://rulerofwisdom.com/forum/balanced-scorecard/",
+				"parts": [
+					{
+						"key": "financial",
+						"label": "Financial",
+						"blurb": "How we look to shareholders.",
+						"depth": "The lag. Revenue, margin, cash. Treat this as the only number and you will harvest the seed corn."
+					},
+					{
+						"key": "customer",
+						"label": "Customer",
+						"blurb": "How we look to them.",
+						"depth": "Whether they stay, refer, pay. A financial win that loses them is a one-quarter story."
+					},
+					{
+						"key": "internal",
+						"label": "Internal process",
+						"blurb": "What we must excel at.",
+						"depth": "The engine. Cycle time, quality, the few processes that make the offer real. Invisible until it breaks."
+					},
+					{
+						"key": "learning",
+						"label": "Learning and growth",
+						"blurb": "How we keep getting better.",
+						"depth": "People, systems, culture. The lead of the other three. Cut this to hit the number and next year has nothing to hit with."
+					}
+				]
+			}
+		],
+		"bonds": [
+			{
+				"a": "six-needs",
+				"b": "two-fears",
+				"kind": "complements",
+				"law": "The six needs are how the two fears dress up as a life."
+			},
+			{
+				"a": "maslow",
+				"b": "dickens",
+				"kind": "complements",
+				"law": "The ladder names the rung. The Process names that you are not climbing it."
+			},
+			{
+				"a": "maslow",
+				"b": "six-needs",
+				"kind": "tensions",
+				"law": "One is a ladder you climb. The other is always on. They disagree about whether a human ever finishes."
+			},
+			{
+				"a": "archetypes",
+				"b": "six-needs",
+				"kind": "complements",
+				"law": "An archetype is a needs mix with a face. The six needs are the mix without the story."
+			},
+			{
+				"a": "dickens",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "The sitting is where not-enough and not-loved get a date instead of a personality."
+			},
+			{
+				"a": "judge",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "The 90-second choice is often: which of the two fears is driving, and do you follow it."
+			},
+			{
+				"a": "maslow",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "After the thing, the two fears decide whether the next rung looks like love or like proving."
+			},
+			{
+				"a": "eisenhower",
+				"b": "slight-edge",
+				"kind": "complements",
+				"law": "The matrix names the important-not-urgent box. The Slight Edge is what you do in that box for years."
+			},
+			{
+				"a": "judge",
+				"b": "slight-edge",
+				"kind": "precedes",
+				"law": "A 90-second rep is the daily discipline at impulse scale. The Slight Edge is that rep, repeated until a life turns."
+			},
+			{
+				"a": "cashflow-quadrant",
+				"b": "assets-liabilities",
+				"kind": "complements",
+				"law": "The quadrant is who is earning. Asset or liability is what the money is pointed at."
+			},
+			{
+				"a": "cashflow-quadrant",
+				"b": "six-needs",
+				"kind": "feeds",
+				"law": "Certainty keeps people in E. Significance often keeps them in S. The mix is why they will not cross."
+			},
+			{
+				"a": "eisenhower",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "Urgency is often not-enough in a hurry. The important-not-urgent work is where not-loved waits."
+			},
+			{
+				"a": "rice",
+				"b": "sadrat",
+				"kind": "complements",
+				"law": "RICE is why they move. SADRAT is the walk. Assess is the lever — without it you are spotting a body."
+			},
+			{
+				"a": "perception-perspective",
+				"b": "three-lives",
+				"kind": "complements",
+				"law": "Perspective is how you look. The three lives are what you are looking at."
+			},
+			{
+				"a": "rice",
+				"b": "six-needs",
+				"kind": "tensions",
+				"law": "Four levers you can pull, or six needs always on. They disagree about what a human is running."
+			},
+			{
+				"a": "rice",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "Coercion is fear with a handle. Ego is not-enough dressed as how I look."
+			},
+			{
+				"a": "perception-perspective",
+				"b": "judge",
+				"kind": "feeds",
+				"law": "The 90-second choice is made from perspective, or it is made from the weather."
+			},
+			{
+				"a": "sadrat",
+				"b": "three-lives",
+				"kind": "feeds",
+				"law": "Spot in public. Recruit into secret. The cycle is the walk through the three lives."
+			},
+			{
+				"a": "three-lives",
+				"b": "archetypes",
+				"kind": "feeds",
+				"law": "The face you meet is public life. The archetype is closer to private. Secret does not wear a type."
+			},
+			{
+				"a": "four-agreements",
+				"b": "archetypes",
+				"kind": "complements",
+				"law": "The archetype is the pattern. The four agreements are the moment the pattern is kept or broken."
+			},
+			{
+				"a": "four-agreements",
+				"b": "judge",
+				"kind": "feeds",
+				"law": "The 90-second choice is which agreement you keep. The rest of the speech can wait."
+			},
+			{
+				"a": "four-agreements",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "Taking it personally is not-enough or not-loved running the moment. The second agreement is the off-switch."
+			},
+			{
+				"a": "four-agreements",
+				"b": "perception-perspective",
+				"kind": "feeds",
+				"law": "Don't make assumptions is perspective with a rule. Perception is how the assumption gets in."
+			},
+			{
+				"a": "grow",
+				"b": "rpm",
+				"kind": "complements",
+				"law": "GROW finds the Goal. RPM is Result, Purpose, MAP — the Goal with a why and a how."
+			},
+			{
+				"a": "rpm",
+				"b": "eisenhower",
+				"kind": "tensions",
+				"law": "The matrix sorts tasks. RPM refuses the task as the unit. The Result is."
+			},
+			{
+				"a": "rpm",
+				"b": "slight-edge",
+				"kind": "feeds",
+				"law": "The MAP is the daily disciplines. Purpose is why you do the easy thing you could skip."
+			},
+			{
+				"a": "grow",
+				"b": "judge",
+				"kind": "feeds",
+				"law": "Will is the 90-second choice with a Goal attached."
+			},
+			{
+				"a": "grow",
+				"b": "four-agreements",
+				"kind": "feeds",
+				"law": "The Goal is who you are becoming. The agreements are how you sit in the Reality step without taking it personally."
+			},
+			{
+				"a": "scarf",
+				"b": "six-hats",
+				"kind": "complements",
+				"law": "SCARF is what the room must be fed. The hats are how it thinks. A hungry room cannot wear one color."
+			},
+			{
+				"a": "five-dysfunctions",
+				"b": "tuckman",
+				"kind": "complements",
+				"law": "The pyramid is who the room is being. Tuckman is when. Storming without trust is just noise."
+			},
+			{
+				"a": "golden-circle",
+				"b": "six-hats",
+				"kind": "feeds",
+				"law": "Why first. Then the hats. A room that starts on What is already arguing."
+			},
+			{
+				"a": "five-dysfunctions",
+				"b": "six-hats",
+				"kind": "feeds",
+				"law": "No trust, and the hats are theater."
+			},
+			{
+				"a": "two-fears",
+				"b": "four-horsemen",
+				"kind": "feeds",
+				"law": "Not-enough and not-loved, in a room, arrive as the four horsemen."
+			},
+			{
+				"a": "deep-work",
+				"b": "eisenhower",
+				"kind": "tensions",
+				"law": "The matrix sorts by urgency. Deep work treats urgency as a trap. They disagree about the hour."
+			},
+			{
+				"a": "deep-work",
+				"b": "slight-edge",
+				"kind": "feeds",
+				"law": "The important-not-urgent box is deep work, repeated until a life turns."
+			},
+			{
+				"a": "wrap",
+				"b": "grow",
+				"kind": "feeds",
+				"law": "GROW is the sitting. WRAP is the life choice that sitting is inside."
+			},
+			{
+				"a": "scarf",
+				"b": "six-needs",
+				"kind": "tensions",
+				"law": "Certainty is on both lists. One is a person. One is a room. They disagree about the unit."
+			},
+			{
+				"a": "love-languages",
+				"b": "six-needs",
+				"kind": "feeds",
+				"law": "Love and connection is one of the six. The five languages are how that one need actually lands."
+			},
+			{
+				"a": "love-languages",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "Speaking the wrong language is how not-loved hides inside a relationship that looks full."
+			},
+			{
+				"a": "ikigai",
+				"b": "dickens",
+				"kind": "tensions",
+				"law": "One names a reason to get up. The other names the cost of staying down. They disagree about which sitting comes first."
+			},
+			{
+				"a": "ikigai",
+				"b": "maslow",
+				"kind": "tensions",
+				"law": "One is a ladder you climb. The other is four circles you stand in. They disagree about whether a life is sequential."
+			},
+			{
+				"a": "five-whys",
+				"b": "grow",
+				"kind": "precedes",
+				"law": "Find the real problem before you name the goal. GROW on the first story is a sitting about a symptom."
+			},
+			{
+				"a": "five-whys",
+				"b": "golden-circle",
+				"kind": "feeds",
+				"law": "Keep asking why and you fall through What into Why. The fifth why is often the core."
+			},
+			{
+				"a": "iceberg",
+				"b": "grow",
+				"kind": "precedes",
+				"law": "Look under the event before you coach the goal. GROW on the tip is a sitting that will come back."
+			},
+			{
+				"a": "iceberg",
+				"b": "rice",
+				"kind": "tensions",
+				"law": "RICE names the lever in the moment. The iceberg says the moment is the tip. They disagree about how deep to look before you move."
+			},
+			{
+				"a": "drama-triangle",
+				"b": "four-horsemen",
+				"kind": "complements",
+				"law": "The triangle is the fear in ninety seconds. The horsemen are that fear after it has a room."
+			},
+			{
+				"a": "drama-triangle",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "The corner is how not-enough or not-loved shows up in the moment. Switch corners and it is still the same fear."
+			},
+			{
+				"a": "drama-triangle",
+				"b": "judge",
+				"kind": "precedes",
+				"law": "Name the corner, then choose. Staying in the triangle is also a choice."
+			},
+			{
+				"a": "drama-triangle",
+				"b": "four-agreements",
+				"kind": "tensions",
+				"law": "Taking it personally is the victim corner. The second agreement is the step off. They disagree about whether the scene is about you."
+			},
+			{
+				"a": "attachment",
+				"b": "two-fears",
+				"kind": "feeds",
+				"law": "The two fears, over years, calcify into a style. Anxious is not-loved. Avoidant is not-enough dressed as not needing."
+			},
+			{
+				"a": "attachment",
+				"b": "love-languages",
+				"kind": "feeds",
+				"law": "The style decides which language you can actually receive. Anxious hears silence. Avoidant hears a demand."
+			},
+			{
+				"a": "attachment",
+				"b": "six-needs",
+				"kind": "tensions",
+				"law": "Certainty versus connection is the avoidant/anxious split wearing needs. They disagree about which hunger is the real one."
+			},
+			{
+				"a": "attachment",
+				"b": "dickens",
+				"kind": "feeds",
+				"law": "The future of not changing is the style with a longer beard. See it dated, or the next person is a rerun."
+			},
+			{
+				"a": "cynefin",
+				"b": "six-hats",
+				"kind": "feeds",
+				"law": "Name the domain, then pick a hat. Six hats in disorder is six conversations about the wrong kind of problem."
+			},
+			{
+				"a": "cynefin",
+				"b": "grow",
+				"kind": "tensions",
+				"law": "GROW assumes the world will sit still for Goal-Reality-Options-Will. Cynefin says some rooms are fires. They disagree about whether a sitting is allowed yet."
+			},
+			{
+				"a": "cynefin",
+				"b": "iceberg",
+				"kind": "precedes",
+				"law": "Name the domain before you look under. Digging for structure in chaos is how you miss the fire."
+			},
+			{
+				"a": "cynefin",
+				"b": "ooda",
+				"kind": "feeds",
+				"law": "The domain tells you which way the loop runs. Chaos is Act first. Clear is Observe until the recipe is obvious."
+			},
+			{
+				"a": "ooda",
+				"b": "judge",
+				"kind": "feeds",
+				"law": "Observe and orient, then choose with a principle attached. A faster loop with no principle is just a quicker mistake."
+			},
+			{
+				"a": "ooda",
+				"b": "wrap",
+				"kind": "tensions",
+				"law": "WRAP widens the frame. OODA tightens the loop. They disagree about whether you have time to widen."
+			},
+			{
+				"a": "seven-powers",
+				"b": "business-model-canvas",
+				"kind": "complements",
+				"law": "The canvas is the machine on one page. The power is why that machine is not copied next quarter."
+			},
+			{
+				"a": "seven-powers",
+				"b": "cashflow-quadrant",
+				"kind": "feeds",
+				"law": "Powers live in B and I. E and S can be busy for years with none. The quadrant is who you are; the power is whether that lasts."
+			},
+			{
+				"a": "seven-powers",
+				"b": "assets-liabilities",
+				"kind": "feeds",
+				"law": "A power is an asset that compounds. A vanity metric is a liability dressed as a moat."
+			},
+			{
+				"a": "business-model-canvas",
+				"b": "golden-circle",
+				"kind": "feeds",
+				"law": "Why sits in the value proposition. The other eight blocks are How and What. A canvas with no Why is a warehouse diagram."
+			},
+			{
+				"a": "business-model-canvas",
+				"b": "five-dysfunctions",
+				"kind": "tensions",
+				"law": "A pretty canvas on a team with no trust is a poster. They disagree about whether the drawing or the people come first."
+			},
+			{
+				"a": "business-model-canvas",
+				"b": "six-needs",
+				"kind": "feeds",
+				"law": "The segments and the offer are needs with a price. A block you cannot name as a hunger is decoration."
+			},
+			{
+				"a": "balanced-scorecard",
+				"b": "tuckman",
+				"kind": "feeds",
+				"law": "You cannot score a room that is still storming as if it were performing. Name the stage, then keep score."
+			},
+			{
+				"a": "balanced-scorecard",
+				"b": "rpm",
+				"kind": "tensions",
+				"law": "RPM wants one Result. The scorecard wants four perspectives. They disagree about whether one number is enough."
+			},
+			{
+				"a": "balanced-scorecard",
+				"b": "eisenhower",
+				"kind": "feeds",
+				"law": "The scorecard is what makes important-not-urgent visible as a number. Without it, the matrix is a feeling."
+			}
+		],
+		"seminars": [
+			{
+				"slug": "the-landing",
+				"name": "The landing",
+				"hook": "You did the thing. Nothing changed.",
+				"when": "You thought this win would finally make you feel different.",
+				"law": "Don't set a new goal yet. See that you are not changing. Name whether the days have a why. Name the need. Name the mix. Name the fear. Name the style that made the win bounce off.",
+				"frameworks": [
+					"dickens",
+					"ikigai",
+					"maslow",
+					"six-needs",
+					"two-fears",
+					"attachment"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-landing/"
+			},
+			{
+				"slug": "the-choice",
+				"name": "The choice",
+				"hook": "You have to pick. Now.",
+				"when": "Ninety seconds or a sleepless night. The moment is already in front of you.",
+				"law": "Ask why until you have a cause, not a story. Look under the event. Name the corner you are in. Then choose with a principle. Then loop: observe, orient, decide, act. Name which of the two fears is driving.",
+				"frameworks": [
+					"five-whys",
+					"iceberg",
+					"drama-triangle",
+					"judge",
+					"ooda",
+					"two-fears"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-choice/"
+			},
+			{
+				"slug": "the-person",
+				"name": "The person",
+				"hook": "You need to know who's acting.",
+				"when": "You, or the person across the table. The face is not the whole story.",
+				"law": "Name the pattern. Keep the four agreements in the moment. Under that, a mix of needs. Name how they feel loved. Under that, one of two fears. Over years, a style.",
+				"frameworks": [
+					"archetypes",
+					"four-agreements",
+					"six-needs",
+					"love-languages",
+					"two-fears",
+					"attachment"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-person/"
+			},
+			{
+				"slug": "the-room",
+				"name": "The room",
+				"hook": "It isn't just you anymore.",
+				"when": "A team, a company, a night. More than one person, and the air has a mood.",
+				"law": "Start with why the room exists. Name the domain you are in. Feed it. Give it one way to think. Then name what's broken, what stage you're in, and which fight is in the room.",
+				"frameworks": [
+					"golden-circle",
+					"cynefin",
+					"scarf",
+					"six-hats",
+					"five-dysfunctions",
+					"tuckman",
+					"four-horsemen"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-room/"
+			},
+			{
+				"slug": "the-compound",
+				"name": "The compound",
+				"hook": "A small thing today. A whole life later.",
+				"when": "It will not matter tomorrow. In five years it will be everything.",
+				"law": "Put it where the important work lives. Make the hour deep. Repeat the easy thing. The short rep is how a life is trained.",
+				"frameworks": [
+					"eisenhower",
+					"deep-work",
+					"slight-edge",
+					"judge"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-compound/"
+			},
+			{
+				"slug": "the-money",
+				"name": "The money",
+				"hook": "Where does the cash actually go?",
+				"when": "And who are you while it moves. The bank form is not the answer.",
+				"law": "Name how you get paid. Name whether the thing puts money in or takes it out. Name the power that lasts. Draw the nine blocks. Under all of it, a mix of needs.",
+				"frameworks": [
+					"cashflow-quadrant",
+					"assets-liabilities",
+					"seven-powers",
+					"business-model-canvas",
+					"six-needs"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-money/"
+			},
+			{
+				"slug": "the-read",
+				"name": "The read",
+				"hook": "Someone is in front of you.",
+				"when": "You need to know who they are, not who they are playing.",
+				"law": "Observe before you narrate. Leave the movie in your head. Name which life you're in with them. Name why they move. Then walk the steps — or you are just chatting.",
+				"frameworks": [
+					"ooda",
+					"perception-perspective",
+					"three-lives",
+					"rice",
+					"sadrat"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-read/"
+			},
+			{
+				"slug": "the-plan",
+				"name": "The plan",
+				"hook": "A pile of to-dos. Nothing that matters.",
+				"when": "A week is filling up. The list is other people's urgency.",
+				"law": "Name where you're going. Turn it into a result, a why, and a how. Then sort the tasks — or you will be busy.",
+				"frameworks": [
+					"grow",
+					"rpm",
+					"eisenhower"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-plan/"
+			},
+			{
+				"slug": "the-fork",
+				"name": "The fork",
+				"hook": "A choice you can feel the years in.",
+				"when": "Not a ninety-second one. The kind that splits a life.",
+				"law": "Get some distance. Name whether the life has a why in four circles. Then sit with the goal and the reality. Name the style that will try to pick. Then look at the future of not choosing — before you move.",
+				"frameworks": [
+					"wrap",
+					"ikigai",
+					"grow",
+					"attachment",
+					"dickens"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-fork/"
+			},
+			{
+				"slug": "the-company",
+				"name": "The company",
+				"hook": "How does this thing last?",
+				"when": "A business, or the idea of one. The slide deck is not the answer.",
+				"law": "Start with why it exists. Draw the machine. Name the power that keeps it from being copied. Keep score on more than money. Then name which quadrant you are actually in.",
+				"frameworks": [
+					"golden-circle",
+					"business-model-canvas",
+					"seven-powers",
+					"balanced-scorecard",
+					"cashflow-quadrant"
+				],
+				"url": "https://rulerofwisdom.com/forum/seminar/the-company/"
+			}
+		]
+	}
+}
